@@ -8,7 +8,7 @@ const UIButton = ({ onClick, to, theme, rounded, children, className, ...restPro
   return (
     <Component
       {...restProps}
-      className={""}
+      className={"btn-login"}
       onClick={onClick}
       to={to}
     >

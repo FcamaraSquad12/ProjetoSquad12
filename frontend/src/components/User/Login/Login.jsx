@@ -71,14 +71,14 @@ const UserLogin = () => {
   }
 
   return (
-    <div className="">
-      <h1 className="">Acessar o Sistema</h1>
-      <form autoComplete="" onSubmit={onSubmit}>
-        <div className="">
+    <div className="container">
+      <h1 className="login-title">Acessar o Sistema</h1>
+      <form className='form' autoComplete="" onSubmit={onSubmit}>
+        <div className="form-control">
           <label htmlFor="email">E-mail</label>
           <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Usuário"/>
         </div>
-        <div className="">
+        <div className="form-control">
           <label htmlFor="password">Senha</label>
           <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Senha"/>
         </div>
@@ -87,7 +87,7 @@ const UserLogin = () => {
         <UIButton
           type="submit"
           theme=""
-          className=""
+          className="btn-login"
           rounded
         >
           Entrar
