@@ -39,6 +39,7 @@ const UserLogin = () => {
     if (loginSucess)
     {
       console.log("acessou!!!")
+      setStatusMsg('Hidden')
       return { token: '1234' } 
     } else {
       setStatusMsg('visible')
