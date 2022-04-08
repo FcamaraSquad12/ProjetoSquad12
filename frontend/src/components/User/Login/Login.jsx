@@ -71,7 +71,7 @@ const UserLogin = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container scale-up-center">
       <h1 className="login-title">Acessar o Sistema</h1>
       <form className='form' autoComplete="" onSubmit={onSubmit}>
         <div className="form-control">
