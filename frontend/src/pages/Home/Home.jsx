@@ -1,23 +1,20 @@
-import React, { useContext } from 'react';
-import './Home.css';
-import StoreContext from '../../components/Store/Context';
-import { useHistory } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
+import './Home.css'
+import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-const PagesHome = () => {  
-  const { setToken } = useContext(StoreContext);
-  const history = useHistory();
+import Logo from '../../components/Template/Logo'
+import Nav from '../../components/Template/Nav'
+import Routes from './Routes'
+import Footer from '../../components/Template/Footer'
 
-  const handleSearch = () =>{
-    return history.push('/search')
-  }
-
-  return(
-    <div className="pages-home">
-      <p>Você acessou o menu principal da aplicação!</p>
-      <button onClick={ () => {setToken('')}}>Sair</button>
-      <button onClick={handleSearch}>buscar mentores</button>
-    </div>
-  )
-};
-
-export default PagesHome;
+export default props =>
+    <BrowserRouter>
+        <div className="app">
+            <Logo />
+            <Nav />
+            <Routes />
+            <Footer />
+        </div>
+    </BrowserRouter>
