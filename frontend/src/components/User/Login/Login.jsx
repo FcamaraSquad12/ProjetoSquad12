@@ -64,7 +64,7 @@ const UserLogin = () => {
 
     if (token) {
       setToken(token);
-      return history.push('/')
+      return history.push('/home')
     }
 
     setValues(initialState);
