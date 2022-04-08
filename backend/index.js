@@ -37,7 +37,7 @@ const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
 
 mongoose
   .connect(
-    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apicluster.efe9v.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
+    `mongodb+srv://${DB_USER}:${DB_PASSWORD}@squad12.xnjgh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,
   )
   .then(() => {
     console.log('Conectou ao banco!')
