@@ -1,4 +1,7 @@
 import React from "react";
 import './TagField.css'
 
-export default ({tag}) => <span className="search-span">{tag}</span>
+export default ({tag, onClick}) => 
+<div>
+    <button name={tag} onClick={onClick} className="search-span">{tag}</button>
+</div>

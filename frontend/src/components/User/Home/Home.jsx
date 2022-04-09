@@ -3,12 +3,14 @@ import Card from "../../Card/Card"
 import TagField from "../../TagField/TagField"
 import axios from 'axios'
 import "./Home.css";
+import { set } from "js-cookie";
 
 const baseUrl = 'http://localhost:3001/'
 
 export default () => {  
   const [users, setUsers] = useState([]);
   const [searchField, setSearchField] = useState('');     
+  const [search, setSearch] = useState([]);
 
   useEffect(() => {
       axios(baseUrl).then(resp => {
@@ -18,15 +20,29 @@ export default () => {
   
   const handleChange = (e) => {
       const { value } = e.target;
-      setSearchField(value);
+      setSearchField(value)
+      setSearch(value)
+      return renderCards()
+  };
+
+  const handleClick = (e) => {
+    const { name } = e.target;
+    setSearch(name)
+    return renderCards()
   };
 
   const renderCards = () => {
+    if (search != '') {
       return users.map((user) => 
-          {if (user.skills.includes(searchField)) {
+        {
+          return user.skills.map((skill) => {
+            if (skill.search(search) != -1){
               return <Card user={user}/>
-          }}
+            }
+          })          
+        }
       )
+    }
   }
 
   return (
@@ -39,13 +55,14 @@ export default () => {
           <div className="label-header"></div>
           <div className="profile-image"></div>
         </div>
-
+        
         <div className="search-container">
           <input name="searchField" type="text" className="search-field" onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
           <div className="search-filter">
-            <TagField tag={"Conteudo"} />
-            <TagField tag={"Pessoas"} />
-            <TagField tag={"Comunidades"} />
+            <TagField tag={"java"} onClick={handleClick}/>
+            <TagField tag={"react"} onClick={handleClick}/>
+            <TagField tag={"Pessoas"} onClick={handleClick}/>
+            <TagField tag={"mongodb"} onClick={handleClick}/>
           </div>
         </div>
 
