@@ -7,6 +7,7 @@ import Login from "./pages/Login/Login";
 import Home from "./components/User/Home/Home";
 
 const PagesRoot = () => (
+<<<<<<< HEAD
   
   <Router>
     <StoreProvider>
@@ -17,6 +18,17 @@ const PagesRoot = () => (
        </Switch>
      </StoreProvider>
    </Router>
+=======
+  <Router>
+    <StoreProvider>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <RoutsPrivate path="/home" component={Home} />
+        <Route path="/" component={Login} />
+      </Switch>
+    </StoreProvider>
+  </Router>
+>>>>>>> 5130003b2e6f02ede0ae98b77017e4ddef376c93
 );
 
 export default PagesRoot;
