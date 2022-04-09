@@ -7,17 +7,15 @@ import Login from "./pages/Login/Login";
 import Home from "./components/User/Home/Home";
 
 const PagesRoot = () => (
-  <Home />
-
-  // <Router>
-  //   <StoreProvider>
-  //     <Switch>
-  //       <Route path="/login" component={Login} />
-  //       <RoutsPrivate path="/home" component={Home} />
-  //       <Route path="/" component={Login} />
-  //     </Switch>
-  //   </StoreProvider>
-  // </Router>
+  <Router>
+    <StoreProvider>
+      <Switch>
+        <Route path="/login" component={Login} />
+        <RoutsPrivate path="/home" component={Home} />
+        <Route path="/" component={Login} />
+      </Switch>
+    </StoreProvider>
+  </Router>
 );
 
 export default PagesRoot;
