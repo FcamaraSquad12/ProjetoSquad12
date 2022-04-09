@@ -16,7 +16,9 @@ export default () => {
       axios(baseUrl).then(resp => {
           setUsers(resp.data);
       })
+      
   },[])
+
   
   const handleChange = (e) => {
       const { value } = e.target;

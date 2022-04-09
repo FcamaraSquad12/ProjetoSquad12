@@ -8,12 +8,24 @@
 .card {
     display: flex;
     width: 180px;
-    height: 200px;
+    height: 220px;
     background-color: orange;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
     padding: 5px;
+}
+.card-body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img-top{
+  width: 100%;
+  height: 90px;
 }
 
 .card-img {
@@ -23,8 +35,14 @@
     background-color: black;
 }
 
-.card h1 {
-    font-size: 1.2rem;
+.item-skill{
+  background-color: silver;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+.icon-item{
+  display: flex;
+  justify-content: space-evenly
 }
 
 .fade-in-fwd {
