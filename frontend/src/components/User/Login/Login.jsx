@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
 import ImgMain from '../../../assets/svg/img-login.svg'
+import RobsonLogo from './Group7.svg'
 
 import './Login.css';
 
@@ -74,7 +75,7 @@ const UserLogin = () => {
   return (
     <div className="container">
       <div className="logo-container">
-        <h1>ROBSON</h1>
+        <img id="Robson-logo" src= {RobsonLogo} alt="" />
         <h2>Uma rede de conexão para criar</h2>
         <h2>vínculos e conquistar objetivos juntos</h2>
         <img src={ImgMain} alt="" />
