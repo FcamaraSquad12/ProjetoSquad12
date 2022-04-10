@@ -38,6 +38,11 @@ nav ul {
 
 }
 
+ li:hover {
+  color: orange;
+  cursor: pointer;
+}
+
 .header-container nav img {
   height: 40px;
   width: 166px;
@@ -74,6 +79,7 @@ nav ul {
   border-radius: 17px;
   margin-top: 50px;
   justify-content: space-between;
+  align-items: center;
 }
 
 .search-container input{
@@ -81,7 +87,8 @@ width: 570px;
 margin-right: 50px;
 background-color: none;
 padding: 0;
-border: 2px solid rgb(0,0,0,0.5)
+border: 2px solid rgb(0,0,0,0.5);
+color: var(--orange-color);
 }
 
 .search-field {
@@ -94,4 +101,8 @@ border: 2px solid rgb(0,0,0,0.5)
 .search-filter {
   display: flex;
   gap: 10px;
+}
+
+.cards-container{
+  justify-content:space-between;
 }

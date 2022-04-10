@@ -54,8 +54,8 @@ export default () => {
         <header className="header-container">
           <nav>
             <img src= {RobsonLogo} alt="" />
-            <ul>
-              <li>Encontre uma pessoa</li>
+            <ul className="ul-item">
+              <li >Encontre uma pessoa</li>
               <li>Grupo de estudos</li>
             </ul>
           </nav>
@@ -76,7 +76,7 @@ export default () => {
           <TagField tag={"PRODUTO"} />
         </div> */}
         <div>
-          <h1>Nossos #SangueLaranjas</h1>
+          <h1>Nossos #DEV's</h1>
         </div>
         <div className="cards-container">
           
