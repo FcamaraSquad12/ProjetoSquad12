@@ -3,11 +3,11 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
-import ImgMain from '../../../assets/svg/img-login.svg'
+import ImgMain from '../../../assets/svg/img-signup.svg'
 import RobsonLogo from './Group7.svg'
 import { Link } from 'react-router-dom';
 
-import './Login.css';
+import './SignUp.css';
 
 const baseUrl = 'http://localhost:3001/'
 
@@ -15,7 +15,7 @@ function initialState() {
   return {email: '', password: ''};
 }
 
-const UserLogin = () => {
+const UserSignUp = () => {
   const [values, setValues] = useState(initialState);
   const { setToken } = useContext(StoreContext);
   const history = useHistory();
@@ -75,15 +75,13 @@ const UserLogin = () => {
 
   return (
     <div className="container">
-      <div className="logo-container">
-        <img id="Robson-logo" src= {RobsonLogo} alt="" />
-        <h2>Uma rede de conexão para criar</h2>
-        <h2>vínculos e conquistar objetivos juntos</h2>
-        <img src={ImgMain} alt="" />
-      </div>
       <div className="login-content scale-up-center">
-        <label className="login-title">Acessar Conta</label>
+        <label className="login-title">Criar Conta</label>
         <form className='form' autoComplete="" onSubmit={onSubmit}>
+          <div className="form-control">
+            <label htmlFor="email"><b>Nome Completo</b></label>
+            <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu nome completo"/>
+          </div>
           <div className="form-control">
             <label htmlFor="email"><b>E-mail</b></label>
             <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
@@ -106,11 +104,17 @@ const UserLogin = () => {
           >
             Entrar
           </UIButton>
-          <p  >Não é cadastrado? <Link id="Sign-up" to="/signup">Cadastre-se</Link></p>
+          <p  >Já tem cadastro? <Link id="Sign-up" to="/login">Entre</Link></p>
         </form>
+      </div>
+      <div className="logo-container">
+        <img id="Robson-logo" src= {RobsonLogo} alt="" />
+        <h2>Uma rede de conexão para criar</h2>
+        <h2>vínculos e conquistar objetivos juntos</h2>
+        <img src={ImgMain} alt="" />
       </div>
     </div>
   );
 };
 
-export default UserLogin;
+export default UserSignUp;
