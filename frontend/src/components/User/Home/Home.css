@@ -1,5 +1,5 @@
 :root {
-  --width-size: 30px;
+  --width-size: 40px;
 }
 
 .App {
@@ -14,20 +14,22 @@
 }
 
 .header-container {
-  display: inline-flex;
+  display:flex;
+  justify-content: space-around;
   width: 100%;
   gap: 30px;
   margin: 10px 0;
 }
-
-.header-container div {
-  background-color: purple;
+.logo{
+  background-color: silver;
+  width: 100px;
 }
 
 .profile-image {
   border-radius: 100%;
   width: var(--width-size);
   height: var(--width-size);
+  background-color: purple;
 }
 
 .label-header {
@@ -41,13 +43,14 @@
   width: 100%;
   gap: 30px;
   margin-bottom: 10px;
+  background-color: purple;
+  border-radius: 17px;
 }
 
 .search-field {
-  background-color: purple;
-  border-radius: 15px;
+  background-color: silver;
+  border-radius: 10px;
   text-align: space-between;
-  
   color: white;
   padding: 0 20px;
 }

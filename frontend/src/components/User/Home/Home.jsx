@@ -34,7 +34,7 @@ export default () => {
   };
 
   const renderCards = () => {
-    if (search != '') {
+    if (search) {
       return users.map((user) => 
         {
           return user.skills.map((skill) => {
@@ -51,10 +51,8 @@ export default () => {
     <div className="app">
       <div className="home-container">
         <div className="header-container">
-          <div className="profile-image"></div>
-          <div className="label-header"></div>
-          <div className="label-header"></div>
-          <div className="label-header"></div>
+          <div className="logo">Logo</div>
+
           <div className="profile-image"></div>
         </div>
         
@@ -68,13 +66,16 @@ export default () => {
           </div>
         </div>
 
-        <div className="search-filter">
+        {/* <div className="search-filter">
           <TagField tag={"UX / UI"} />
           <TagField tag={"DEV"} />
           <TagField tag={"PRODUTO"} />
+        </div> */}
+        <div>
+          <h1>Nossos #SangueLaranjas</h1>
         </div>
-
         <div className="cards-container">
+          
           {renderCards()}
         </div>
       </div>
