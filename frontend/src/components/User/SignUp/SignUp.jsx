@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
 import ImgMain from '../../../assets/svg/img-signup.svg'
-import RobsonLogo from './Group7.svg'
+import RobsonLogo from '../../../assets/svg/logo.svg'
 import { Link } from 'react-router-dom';
 
 import './SignUp.css';

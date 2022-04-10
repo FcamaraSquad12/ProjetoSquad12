@@ -4,7 +4,7 @@ import TagField from "../../TagField/TagField"
 import axios from 'axios'
 import "./Home.css";
 import { set } from "js-cookie";
-import RobsonLogo from './Group7.svg'
+import RobsonLogo from '../../../assets/svg/logo.svg'
 
 const baseUrl = 'http://localhost:3001/'
 
