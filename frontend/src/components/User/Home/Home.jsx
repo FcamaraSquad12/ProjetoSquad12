@@ -62,11 +62,16 @@ export default () => {
         </header>
         
         <div className="search-container">
-        <div className="search-filter">
+          <div className="search-filter">
             <TagField tag={"react"} onClick={handleClick}/>
             <TagField tag={"java"} onClick={handleClick}/>
           </div>
-          <input name="searchField" type="text" className="search-field" onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
+          <div className="input-group">
+            <div className="i-search">
+            <i id="icon-search" class="fas fa-search"></i>
+            </div>
+            <input name="searchField" type="text" className="search-field" id="search-input"onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
+          </div>
           
         </div>
 

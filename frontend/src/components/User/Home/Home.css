@@ -34,12 +34,12 @@ nav ul {
   flex-direction: row;
   width: 100%;
   height: 40px;
-  border-bottom: 2px solid orange;
+  border-bottom: 2px solid #FE4400;
 
 }
 
  li:hover {
-  color: orange;
+  color: #FE662E;
   cursor: pointer;
 }
 
@@ -84,15 +84,18 @@ nav ul {
 
 .search-container input{
 width: 570px;
-margin-right: 50px;
+margin-right: 40px;
+border-left:none;
 background-color: none;
 padding: 0;
-border: 2px solid rgb(0,0,0,0.5);
 color: var(--orange-color);
+outline: none;
+border: 1px solid black;
+
 }
 
 .search-field {
-  border-radius: 10px;
+  border-radius: none;
   text-align: space-between;
   color: white;
   padding: 0 20px;
@@ -105,4 +108,32 @@ color: var(--orange-color);
 
 .cards-container{
   justify-content:space-between;
+}
+
+.i-search {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 48px;
+  width: 48px;
+  background-color: none;
+
+}
+
+.input-group {
+  display: flex;
+
+}
+
+#search-input {
+  border-radius: none;
+}
+
+#icon-search {
+ 
+}
+
+
+#search-input::placeholder {
+  text-align: center;
 }
