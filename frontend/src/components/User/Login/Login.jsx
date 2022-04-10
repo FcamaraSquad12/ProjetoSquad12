@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useHistory } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
+import ImgMain from '../../../assets/svg/img-login.svg'
 
 import './Login.css';
 
@@ -71,28 +72,41 @@ const UserLogin = () => {
   }
 
   return (
-    <div className="container scale-up-center">
-      <h1 className="login-title">Acessar o Sistema</h1>
-      <form className='form' autoComplete="" onSubmit={onSubmit}>
-        <div className="form-control">
-          <label htmlFor="email">E-mail</label>
-          <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Usuário"/>
-        </div>
-        <div className="form-control">
-          <label htmlFor="password">Senha</label>
-          <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Senha"/>
-        </div>
-        <label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida</label>
+    <div className="container">
+      <div className="logo-container">
+        <h1>ROBSON</h1>
+        <h2>Uma rede de conexção para criar</h2>
+        <h2>vínculos e conquistar objetivos juntos</h2>
+        <img src={ImgMain} alt="" />
+      </div>
+      <div className="login-content scale-up-center">
+        <label className="login-title">Acessar o Sistema</label>
+        <form className='form' autoComplete="" onSubmit={onSubmit}>
+          <div className="form-control">
+            <label htmlFor="email"><b>E-mail</b></label>
+            <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
+          </div>
+          <div className="form-control">
+            <label htmlFor="password"><b>Senha</b></label>
+            <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
+            <a href="./">Esqueci a senha</a>
+          </div>
+          {
+          // Msg de usuário ou senha inválida removida
+          //<label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida</label>
+          }
 
-        <UIButton
-          type="submit"
-          theme=""
-          className="btn-login"
-          rounded
-        >
-          Entrar
-        </UIButton>
-      </form>
+          <p href="./">Não é cadastrado? <a href="./">Cadastre-se</a></p>
+          <UIButton
+            type="submit"
+            theme=""
+            className="btn-login"
+            rounded
+          >
+            Entrar
+          </UIButton>
+        </form>
+      </div>
     </div>
   );
 };
