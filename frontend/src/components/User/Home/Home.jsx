@@ -4,6 +4,7 @@ import TagField from "../../TagField/TagField"
 import axios from 'axios'
 import "./Home.css";
 import { set } from "js-cookie";
+import RobsonLogo from './Group7.svg'
 
 const baseUrl = 'http://localhost:3001/'
 
@@ -50,20 +51,23 @@ export default () => {
   return (
     <div className="app">
       <div className="home-container">
-        <div className="header-container">
-          <div className="logo">Logo</div>
-
-          <div className="profile-image"></div>
-        </div>
+        <header className="header-container">
+          <nav>
+            <img src= {RobsonLogo} alt="" />
+            <ul>
+              <li>Encontre uma pessoa</li>
+              <li>Grupo de estudos</li>
+            </ul>
+          </nav>
+        </header>
         
         <div className="search-container">
-          <input name="searchField" type="text" className="search-field" onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
-          <div className="search-filter">
-            <TagField tag={"java"} onClick={handleClick}/>
+        <div className="search-filter">
             <TagField tag={"react"} onClick={handleClick}/>
-            <TagField tag={"Pessoas"} onClick={handleClick}/>
-            <TagField tag={"mongodb"} onClick={handleClick}/>
+            <TagField tag={"java"} onClick={handleClick}/>
           </div>
+          <input name="searchField" type="text" className="search-field" onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
+          
         </div>
 
         {/* <div className="search-filter">
