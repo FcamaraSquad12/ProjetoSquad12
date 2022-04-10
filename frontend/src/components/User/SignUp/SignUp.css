@@ -40,12 +40,14 @@
 }
 
 .signup-form{
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .signup-form-control{
     display: flex;
     flex-direction: column;
+    height: 60px;
+    margin-bottom: 3px;
 }
 
 .btn-login {
@@ -72,7 +74,7 @@ label,input{
 
 .signup-title {
   font-size: 1.5rem;
-  margin-top: 60px;
+  margin-top: 10px;
   font-weight: bold;
 }
 

@@ -80,16 +80,25 @@ const UserSignUp = () => {
         <form className='signup-form' autoComplete="" onSubmit={onSubmit}>
           <div className="signup-form-control">
             <label htmlFor="email"><b>Nome Completo</b></label>
-            <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu nome completo"/>
+            <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu nome"/>
           </div>
           <div className="signup-form-control">
-            <label htmlFor="email"><b>E-mail</b></label>
+            <label htmlFor="email"><b>Endereço de E-mail</b></label>
             <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
           </div>
           <div className="signup-form-control">
             <label htmlFor="password"><b>Senha</b></label>
             <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
           </div>
+          <div className="signup-form-control">
+            <label htmlFor="password"><b>Confirmar Senha</b></label>
+            <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Confirmar senha"/>
+          </div>
+          <div className="signup-form-control">
+            <label htmlFor="password"><b>Whatsapp</b></label>
+            <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Inserir número"/>
+          </div>
+          
           {
           // Msg de usuário ou senha inválida removida
           //<label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida</label>
