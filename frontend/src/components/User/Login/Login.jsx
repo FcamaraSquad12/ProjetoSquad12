@@ -75,7 +75,7 @@ const UserLogin = () => {
 
   return (
     <div className="container">
-      <div className="logo-container">
+      <div className="logo-container scale-up-center">
         <img id="Robson-logo" src= {RobsonLogo} alt="" />
         <h2>Uma rede de conexão para criar</h2>
         <h2>vínculos e conquistar objetivos juntos</h2>

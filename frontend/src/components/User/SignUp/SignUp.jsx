@@ -115,7 +115,7 @@ const UserSignUp = () => {
           <p  >Já tem cadastro? <Link id="Sign-up" to="/login">Entre</Link></p>
         </form>
       </div>
-      <div className="signup-logo-container">
+      <div className="signup-logo-container scale-up-center">
         <img id="Signup-Robson-logo" src= {RobsonLogo} alt="" />
         <h2>Uma rede de conexão para criar</h2>
         <h2>vínculos e conquistar objetivos juntos</h2>
