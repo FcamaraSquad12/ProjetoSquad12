@@ -5,9 +5,11 @@
   height: auto;
   width: 900px; 
 }
-.logo-container {
+/* .logo-container {
+ 
+} */
 
-}
+
 
 .logo-container img {
   width: 100%;
@@ -64,6 +66,17 @@ label,input{
   margin-top: 60px;
   font-weight: bold;
 }
+
+#forgot {
+  text-align:right;
+  color: var(--orange-color);
+}
+
+#sing-up {
+  color: var(--orange-color);
+}
+
+
 
 @media screen and (max-width: 450px) {
     .container{

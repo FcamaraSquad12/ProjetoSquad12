@@ -75,12 +75,12 @@ const UserLogin = () => {
     <div className="container">
       <div className="logo-container">
         <h1>ROBSON</h1>
-        <h2>Uma rede de conexção para criar</h2>
+        <h2>Uma rede de conexão para criar</h2>
         <h2>vínculos e conquistar objetivos juntos</h2>
         <img src={ImgMain} alt="" />
       </div>
       <div className="login-content scale-up-center">
-        <label className="login-title">Acessar o Sistema</label>
+        <label className="login-title">Acessar Conta</label>
         <form className='form' autoComplete="" onSubmit={onSubmit}>
           <div className="form-control">
             <label htmlFor="email"><b>E-mail</b></label>
@@ -89,14 +89,13 @@ const UserLogin = () => {
           <div className="form-control">
             <label htmlFor="password"><b>Senha</b></label>
             <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
-            <a href="./">Esqueci a senha</a>
+            <a id="forgot" href="./">Esqueci a senha</a>
           </div>
           {
           // Msg de usuário ou senha inválida removida
           //<label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida</label>
           }
 
-          <p href="./">Não é cadastrado? <a href="./">Cadastre-se</a></p>
           <UIButton
             type="submit"
             theme=""
@@ -105,6 +104,7 @@ const UserLogin = () => {
           >
             Entrar
           </UIButton>
+          <p  >Não é cadastrado? <a id="sing-up" href="./">Cadastre-se</a></p>
         </form>
       </div>
     </div>
