@@ -74,22 +74,21 @@ const UserSignUp = () => {
   }
 
   return (
-    <div className="container">
-      <div className="login-content scale-up-center">
-        <label className="login-title">Criar Conta</label>
-        <form className='form' autoComplete="" onSubmit={onSubmit}>
-          <div className="form-control">
+    <div className="signup-container">
+      <div className="signup-content scale-up-center">
+        <label className="signup-title">Criar Conta</label>
+        <form className='signup-form' autoComplete="" onSubmit={onSubmit}>
+          <div className="signup-form-control">
             <label htmlFor="email"><b>Nome Completo</b></label>
             <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu nome completo"/>
           </div>
-          <div className="form-control">
+          <div className="signup-form-control">
             <label htmlFor="email"><b>E-mail</b></label>
             <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
           </div>
-          <div className="form-control">
+          <div className="signup-form-control">
             <label htmlFor="password"><b>Senha</b></label>
             <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
-            <a id="forgot" href="./">Esqueci a senha</a>
           </div>
           {
           // Msg de usuário ou senha inválida removida
@@ -107,8 +106,8 @@ const UserSignUp = () => {
           <p  >Já tem cadastro? <Link id="Sign-up" to="/login">Entre</Link></p>
         </form>
       </div>
-      <div className="logo-container">
-        <img id="Robson-logo" src= {RobsonLogo} alt="" />
+      <div className="signup-logo-container">
+        <img id="Signup-Robson-logo" src= {RobsonLogo} alt="" />
         <h2>Uma rede de conexão para criar</h2>
         <h2>vínculos e conquistar objetivos juntos</h2>
         <img src={ImgMain} alt="" />
