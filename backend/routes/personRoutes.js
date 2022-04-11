@@ -3,18 +3,24 @@ const router = require('express').Router();
 const Person = require('../models/Person')
 
 router.post('/', async (req, res) => {
-    const { name, email, password, skills, interests } = req.body
+    const { name, profession, description, email, password, skills, whatsapp, calendly, portfolio, linkedin, drive } = req.body
   
     if (!name) {
         res.status(422).json({error: 'O nome é obrigatório!'})
     }
 
     const person = {
-      name,
-      email,
-      password,
-      skills,
-      interests
+      name, 
+      profession, 
+      description, 
+      email, 
+      password, 
+      skills, 
+      whatsapp, 
+      calendly,
+      portfolio, 
+      linkedin, 
+      drive
     }
   
     try {
@@ -56,14 +62,20 @@ router.post('/', async (req, res) => {
   router.patch('/:id', async (req, res) => {
     const id = req.params.id
   
-    const { name, email, password, skills, interests } = req.body
+    const { name, profession, description, email, password, skills, whatsapp, calendly, portfolio, linkedin, drive } = req.body
   
     const person = {
-      name,
-      email,
-      password,
-      skills,
-      interests
+      name, 
+      profession, 
+      description, 
+      email, 
+      password, 
+      skills, 
+      whatsapp,
+      calendly, 
+      portfolio, 
+      linkedin, 
+      drive
     }
   
     try {

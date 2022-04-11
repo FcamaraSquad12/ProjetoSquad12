@@ -8,6 +8,7 @@ const Person = mongoose.model('Person', {
   password: String,
   skills: Array,
   whatsapp: String,
+  calendly: String,
   portfolio: String,
   linkedin: String,
   drive: String
