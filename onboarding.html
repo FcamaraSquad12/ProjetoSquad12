@@ -6,110 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="onboarding.css">
     <title>Onboarding</title>
 </head>
 <body>
     <main>
         <div class="container">
             <div class="accordion" id="accordionExample">
-            <div class="steps">
-                <progress id="progress" value=0 max=100 ></progress>
-                <div class="step-item">
-                    <button class="step-button text-center" type="button"       data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        1
-                    </button>
-                    <div class="step-title">
-                        
+                <div class="steps">
+                    <progress id="progress" value=0 max=100 ></progress>
+                    <div class="step-item">
+                        <button class="step-button text-center" type="button"       data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1
+                        </button>
+                    </div>
+                    <div class="step-item">
+                        <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2
+                        </button>
+                    </div>
+                    <div class="step-item">
+                        <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            3
+                        </button>
                     </div>
                 </div>
-                <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        2
-                    </button>
-                    <div class="step-title">
-                        
+                
+                <div class="card">
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                        <div>
+                            <img src="./frontend/src/assets/svg/teampic.svg" alt="">
+                        </div>
+                        <div class="text-card">
+                            <h1>Olá Sangue Laranja, que bom ter você aqui!</h1>
+                            <h4>Você está prestes a se conectar à Rede Otimizada de Busca e Solução Orange Networking (ROBSON)</h4>
+                            <ul>
+                                <li>Pessoas da FCamara com diversas skills prontas pra te ajudar ou precisando de sua ajuda.</li>
+                                <li>Grupos de estudos (crowdlearning) para compartilhar suas experiências e aprender coletivamente.</li>
+                                <li>Materiais indicados pelos usuários da ROBSON.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-card-1">
+                            <button type="button" class="btn-1" id="btn-1" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo">Vamos lá!<i class="fa-solid fa-arrow-right-long"></i></button>
+                            <button class="btn-2">Não quero me conectar</button>
+                        </div>
+                        </div>
                     </div>
                 </div>
-                <div class="step-item">
-                    <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        3
-                    </button>
-                    <div class="step-title">
-                        
+                <div class="card">
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="logo">
+                                <img src="frontend/src/assets/svg/logo.svg" alt="">
+                            </div>
+                            <div class="text-card">
+                                <h1>Bora mapear essas skills ai meu truta!</h1>
+                            </div>
+                            <div>
+                                <img src="./frontend/src/assets/svg/notification.svg" alt="">
+                            </div>
+                            <div class="btn-card-1">
+                                <button type="button" class="btn-1" id="btn-2" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree">Avançar<i class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="card">
-                <div  id="headingOne">
-                </div>
-            
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="card-body">
-                       <div>
-                           <img src="Team building _Monochromatic 1.png" alt="">
-                       </div>
-                       <div class="text-card">
-                           <h1>Lorem ipsum dolor sit amet.</h1>
-                           <p>Mussum Ipsum, cacilds vidis litro abertis. Pra lá , depois divoltis porris, paradis.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Mussum Ipsum, cacilds vidis litro abertis. </p>
-                       </div>
-                       <div class="btn-card-1">
-                           <button type="button" class="btn-1" id="btn-1" data-bs-toggle="collapse"
-                           data-bs-target="#collapseTwo">Vamos lá!<i class="fa-solid fa-arrow-right-long"></i></button>
-                           <button class="btn-2">Quero não</button>
-                       </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div  id="headingTwo">
-            
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="card-body">
+                <div class="card">
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
                         <div class="logo">
                             <img src="frontend/src/assets/svg/logo.svg" alt="">
                         </div>
-                        <div class="text-card">
-                            <h1>Bora mapear essas skills ai meu truta!</h1>
-                        </div>
-                        <div>
-                            <img src="Notifications_Monochromatic 1.png" alt="">
-                        </div>
-                        <div class="btn-card-1">
-                            <button type="button" class="btn-1" id="btn-2" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree">Avançar<i class="fa-solid fa-arrow-right-long"></i></button>
+                        <div class="card-body">
+                            <h1>Congratulations!</h1>
+                            <p>Obrigado pelo Cadastro!!</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div  id="headingThree">
-            
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                    <div class="logo">
-                        <img src="frontend/src/assets/svg/logo.svg" alt="">
-                    </div>
-                    <div class="card-body">
-                        <h1>Congratulations!</h1>
-                        <p>Obrigado pelo Cadastro!!</p>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
+        </div>
 
     </main>
     
 
-    <script src="script.js"></script>
+    <script>
+        const stepButtons = document.querySelectorAll('.step-button');
+        const progress = document.querySelector('#progress');
+        const btn1 = document.getElementById('btn-1')
+        const btn2 = document.getElementById('btn-2')
+
+        btn1.addEventListener('click', () => {
+            progress.setAttribute('value', 50 );
+            stepButtons[0].classList.add('done')
+        })
+        btn2.addEventListener('click', () => {
+            progress.setAttribute('value', 100 );
+            stepButtons[1].classList.add('done')
+        })
+        Array.from(stepButtons).forEach((button,index) => {
+            button.addEventListener('click', () => {
+            progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//aqui tem 3 botões. 2 espaços.
+
+            stepButtons.forEach((item, secindex)=>{
+                if(index > secindex){
+                    item.classList.add('done');
+                    
+                }
+                if(index < secindex){
+                    item.classList.remove('done');
+                }
+            })
+        })
+})
+    </script>
     <script src="https://kit.fontawesome.com/159e43023c.js" crossorigin="anonymous"></script>
 </body>
 </html>
