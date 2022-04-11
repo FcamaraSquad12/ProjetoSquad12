@@ -67,7 +67,7 @@ const UserLogin = () => {
 
     if (token) {
       setToken(token);
-      return navigate('/home')
+      return navigate('/search-person')
     }
 
     setValues(initialState);

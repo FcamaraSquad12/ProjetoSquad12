@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../../Card/Card"
 import TagField from "../../TagField/TagField"
 import axios from 'axios'
-import "./Home.css";
+import "./SearchPerson.css";
 import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
 

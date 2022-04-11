@@ -5,7 +5,7 @@ import RoutsPrivate from "components/Routes/Private/Private";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Profile from "./pages/Profile/Profile";
-import Home from "./components/User/Home/Home";
+import SearchPerson from "./components/User/SearchPerson/SearchPerson";
 
 const PagesRoot = () => (
   <Router>
@@ -13,7 +13,7 @@ const PagesRoot = () => (
        <Routes>
          <Route path="/login" element={<Login/>} />
          <Route path="/signup" element={<SignUp/>} />
-         <Route path="/home" element={<Home/>} />
+         <Route path="/search-person" element={<SearchPerson/>} />
          <Route path="/profile" element={<Profile/>} />
          <Route path="/" element={<Login/>} />
        </Routes>
