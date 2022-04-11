@@ -26,12 +26,6 @@ export default ({ user }) => {
           </div>
         </div>
         
-        {/* <div className="icon-item">
-          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="#"><i class="fa-brands fa-medium"></i></a>
-          <a href="#"><i class="fa-solid fa-calendar-check"></i></a>
-        </div> */}
-
         <button className= "button-profile" onClick={handleOpenProfile}>Ver perfil</button>
       </div>
     </div>
