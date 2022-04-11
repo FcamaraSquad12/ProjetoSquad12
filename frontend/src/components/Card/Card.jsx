@@ -1,13 +1,13 @@
 import React from "react";
 import "./Card.css";
 import Img from '../../assets/imgs/img-profile.jpg'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default ({ user }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleOpenProfile = () => {
-    return history.push('/profile')
+    return navigate('/profile', {state: user})
   }
 
   return (

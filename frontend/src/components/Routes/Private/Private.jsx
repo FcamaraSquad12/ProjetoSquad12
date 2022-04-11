@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Route, Redirect} from "react-router-dom";
+import { Route, NavLink} from "react-router-dom";
 import StoreContext from "components/Store/Context";
 
 const RoutsPrivate = ({ component: Component, ...rest}) => {
@@ -11,7 +11,7 @@ const RoutsPrivate = ({ component: Component, ...rest}) => {
             
             render={() => token
                 ? <Component { ...rest }/> 
-                : <Redirect  to="/login"/>
+                : <NavLink to="/login"/>
             }
         />
     )

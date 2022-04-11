@@ -1,18 +1,7 @@
 import React from "react"
 import "./Profile.css"
 
-export default () => {
-    const user = {
-        name: "Miguel Fialho",
-        profession: "Traine",
-        description: "Oi, Eu sou o Miguel!",
-        skills: ["react", "javascript"],
-        whatsApp: "1234654564",
-        linkedin: "/",
-        medium: "/",
-        portfolio: "/"
-    }
-
+export default ({user}) => {
     return (
         <div>
             <div>

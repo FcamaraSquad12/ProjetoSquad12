@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
 import ImgMain from '../../../assets/svg/img-login.svg'
@@ -18,7 +18,7 @@ function initialState() {
 const UserLogin = () => {
   const [values, setValues] = useState(initialState);
   const { setToken } = useContext(StoreContext);
-  const history = useHistory();
+  const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [statusMsg, setStatusMsg] = useState(false);
 
@@ -67,7 +67,7 @@ const UserLogin = () => {
 
     if (token) {
       setToken(token);
-      return history.push('/home')
+      return navigate('/home')
     }
 
     setValues(initialState);

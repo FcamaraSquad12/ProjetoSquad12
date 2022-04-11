@@ -4,9 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 const PagesProfile = () => {
   const { state } = useLocation();
-  console.log(state)
-
-  return <Profile/>
+  return <Profile user={state}/>
 }
 
 export default PagesProfile;
