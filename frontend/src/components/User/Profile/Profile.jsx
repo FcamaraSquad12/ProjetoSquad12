@@ -25,7 +25,7 @@ export default ({ user }) => {
           <h1>{user.name}</h1>
           <h2>{user.profession}</h2>
           <h3>{user.description}</h3>
-          <button>Agendar</button>
+          <a href={user.calendly} target="_blank">Agendar</a>
         </div>
       </div>
 
@@ -39,19 +39,19 @@ export default ({ user }) => {
         <div>
           <img src="" alt="" />
           <h2>Acesse meu portifólio</h2>
-          <h3>Portifólio</h3>
+          <a src={user.portfolio} href={user.portfolio} target="_blank">Portifólio</a>
         </div>
 
         <div>
           <img src="" alt="" />
           <h2>Acesse meu Linkedin</h2>
-          <h3>Linkedin</h3>
+          <a href={user.linkedin} target="_blank">Linkedin</a>
         </div>
 
         <div>
           <img src="" alt="" />
           <h2>Acesse meus arquivos</h2>
-          <h3>Google Drive</h3>
+          <a href={user.drive} target="_blank">Google Drive</a>
         </div>
       </div>
     </div>

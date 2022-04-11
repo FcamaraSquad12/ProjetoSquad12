@@ -16,7 +16,7 @@ export default ({ user }) => {
       <div className="card-body">
         <div>
           <h2 className="card-title">{user.name}</h2>
-          <h4 className="card-subtile mb-2 text-muted">{user.specialty} Jr Develop</h4>
+          <h4 className="card-subtile mb-2 text-muted">{user.profession}</h4>
           <div>
             <p className="skill">
               {user.skills.map((skill) => (
