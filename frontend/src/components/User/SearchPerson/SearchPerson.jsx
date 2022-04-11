@@ -40,17 +40,21 @@ export default () => {
   }
 
   const renderCards = () => {
-    if (search) {
+    let found
+   //if (search) {
       return users.map((user) => 
         {
+          found = false
+
           return user.skills.map((skill) => {
-            if (skill.search(search) != -1){
+            if (!found && skill.search(search) != -1){
+              found = true
               return <Card user={user}/>
             }
           })          
         }
       )
-    }
+    //}
   }
 
   return (
