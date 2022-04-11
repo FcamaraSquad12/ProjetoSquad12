@@ -83,6 +83,8 @@ const UserLogin = () => {
       </div>
       <div className="login-content scale-up-center">
         <label className="login-title">Acessar Conta</label>
+        <label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida!</label>
+
         <form className='form' autoComplete="" onSubmit={onSubmit}>
           <div className="form-control">
             <label htmlFor="email"><b>E-mail</b></label>
@@ -95,7 +97,6 @@ const UserLogin = () => {
           </div>
           {
           // Msg de usuário ou senha inválida removida
-          //<label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida</label>
           }
 
           <UIButton
