@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Card from "../../CardPerson/CardPerson"
+import Card from "../../CardGroup/CardGroup"
 import TagField from "../../TagField/TagField"
 import axios from 'axios'
-import "./SearchPerson.css";
+import "./SearchGroup.css";
 import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
 import { useNavigate } from 'react-router-dom'
@@ -36,7 +36,7 @@ export default () => {
   };
 
   const handleFindGroup = () => {
-    return navigate('/search-group')
+    return navigate('/search-person')
   }
 
   const renderCards = () => {
@@ -60,8 +60,8 @@ export default () => {
           <nav>
             <img src= {RobsonLogo} alt="" />
             <ul className="ul-item">
-              <li className="selected-page">Encontre uma pessoa</li>
-              <li onClick={handleFindGroup}>Grupo de estudos</li>
+              <li onClick={handleFindGroup}>Encontre uma pessoa</li>
+              <li className="selected-page">Grupo de estudos</li>
             </ul>
           </nav>
         </header>
@@ -86,7 +86,7 @@ export default () => {
           <TagField tag={"PRODUTO"} />
         </div> */}
         <div>
-          <h1>Nossos #DEV's</h1>
+          <h1>Grupos de estudo online</h1>
         </div>
         <div className="cards-container">
           

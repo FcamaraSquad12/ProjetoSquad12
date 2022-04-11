@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import "./CardPerson.css";
 import Img from '../../assets/svg/profile.svg'
 import { useNavigate } from 'react-router-dom'
 

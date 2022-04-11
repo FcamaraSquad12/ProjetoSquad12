@@ -1,8 +1,8 @@
 import React from 'react';
-import MainMenu from 'components/User/SearchPerson/SearchPerson';
+import SearchPerson from 'components/User/SearchPerson/SearchPerson';
 
-const PagesHome = () => (
-  <MainMenu />
+const PagesSearchPerson = () => (
+  <SearchPerson />
 );
 
-export default PagesHome;
+export default PagesSearchPerson;

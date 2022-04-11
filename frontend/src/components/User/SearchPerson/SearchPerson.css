@@ -44,6 +44,10 @@ nav ul {
   cursor: pointer;
 }
 
+.selected-page {
+  color: #FE662E;
+}
+
 .header-container nav img {
   height: 40px;
   width: 166px;
