@@ -1,20 +1,22 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StoreProvider from "components/Store/Provider";
 import RoutsPrivate from "components/Routes/Private/Private";
 import Login from "./pages/Login/Login";
-// import Home from "./pages/Home/Home"
+import SignUp from "./pages/SignUp/SignUp";
+import Profile from "./pages/Profile/Profile";
 import Home from "./components/User/Home/Home";
 
 const PagesRoot = () => (
- 
   <Router>
     <StoreProvider>
-       <Switch>
-         <Route path="/login" component={Login} />
-         <RoutsPrivate path="/home" component={Home} />
-         <Route path="/" component={Login} />
-       </Switch>
+       <Routes>
+         <Route path="/login" element={<Login/>} />
+         <Route path="/signup" element={<SignUp/>} />
+         <Route path="/home" element={<Home/>} />
+         <Route path="/profile" element={<Profile/>} />
+         <Route path="/" element={<Login/>} />
+       </Routes>
      </StoreProvider>
    </Router>
 

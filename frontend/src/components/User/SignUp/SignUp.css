@@ -2,7 +2,7 @@
   justify-content: center;
 }
 
-.container{
+.signup-container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,21 +10,21 @@
   width: 900px; 
   margin: 0 auto;
 }
-/* .logo-container {
- 
-} */
+.signup-logo-container {
+ text-align: right;
+}
 
-#Robson-logo {
+#Signup-Robson-logo {
   width: 300px;
   height: 64px;
 }
 
 
-.logo-container img {
+.signup-logo-container img {
   width: 100%;
 }
 
-.login-content {
+.signup-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,13 +39,15 @@
     border-style: inset;
 }
 
-.form{
-    margin-top: 20px;
+.signup-form{
+    margin-top: 0px;
 }
 
-.form-control{
+.signup-form-control{
     display: flex;
     flex-direction: column;
+    height: 60px;
+    margin-bottom: 3px;
 }
 
 .btn-login {
@@ -70,16 +72,12 @@ label,input{
      color: rgb(80, 80, 80);
 }
 
-.login-title {
+.signup-title {
   font-size: 1.5rem;
-  margin-top: 60px;
+  margin-top: 10px;
   font-weight: bold;
 }
 
-#forgot {
-  text-align:right;
-  color: var(--orange-color);
-}
 
 #sing-up {
   color: var(--orange-color);

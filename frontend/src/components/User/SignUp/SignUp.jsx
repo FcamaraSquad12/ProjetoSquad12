@@ -3,11 +3,11 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 import UIButton from 'components/UI/Button/Button';
-import ImgMain from '../../../assets/svg/img-login.svg'
+import ImgMain from '../../../assets/svg/img-signup.svg'
 import RobsonLogo from '../../../assets/svg/logo.svg'
 import { Link } from 'react-router-dom';
 
-import './Login.css';
+import './SignUp.css';
 
 const baseUrl = 'http://localhost:3001/'
 
@@ -15,7 +15,7 @@ function initialState() {
   return {email: '', password: ''};
 }
 
-const UserLogin = () => {
+const UserSignUp = () => {
   const [values, setValues] = useState(initialState);
   const { setToken } = useContext(StoreContext);
   const navigate = useNavigate();
@@ -74,25 +74,31 @@ const UserLogin = () => {
   }
 
   return (
-    <div className="container">
-      <div className="logo-container scale-up-center">
-        <img id="Robson-logo" src= {RobsonLogo} alt="" />
-        <h2>Uma rede de conexão para criar</h2>
-        <h2>vínculos e conquistar objetivos juntos</h2>
-        <img src={ImgMain} alt="" />
-      </div>
-      <div className="login-content scale-up-center">
-        <label className="login-title">Acessar Conta</label>
-        <form className='form' autoComplete="" onSubmit={onSubmit}>
-          <div className="form-control">
-            <label htmlFor="email"><b>E-mail</b></label>
+    <div className="signup-container">
+      <div className="signup-content scale-up-center">
+        <label className="signup-title">Criar Conta</label>
+        <form className='signup-form' autoComplete="" onSubmit={onSubmit}>
+          <div className="signup-form-control">
+            <label htmlFor="email"><b>Nome Completo</b></label>
+            <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu nome"/>
+          </div>
+          <div className="signup-form-control">
+            <label htmlFor="email"><b>Endereço de E-mail</b></label>
             <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
           </div>
-          <div className="form-control">
+          <div className="signup-form-control">
             <label htmlFor="password"><b>Senha</b></label>
             <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
-            <a id="forgot" href="./">Esqueci a senha</a>
           </div>
+          <div className="signup-form-control">
+            <label htmlFor="password"><b>Confirmar Senha</b></label>
+            <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Confirmar senha"/>
+          </div>
+          <div className="signup-form-control">
+            <label htmlFor="password"><b>Whatsapp</b></label>
+            <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Inserir número"/>
+          </div>
+          
           {
           // Msg de usuário ou senha inválida removida
           //<label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida</label>
@@ -106,11 +112,17 @@ const UserLogin = () => {
           >
             Entrar
           </UIButton>
-          <p  >Não é cadastrado? <Link id="Sign-up" to="/signup">Cadastre-se</Link></p>
+          <p  >Já tem cadastro? <Link id="Sign-up" to="/login">Entre</Link></p>
         </form>
+      </div>
+      <div className="signup-logo-container scale-up-center">
+        <img id="Signup-Robson-logo" src= {RobsonLogo} alt="" />
+        <h2>Uma rede de conexão para criar</h2>
+        <h2>vínculos e conquistar objetivos juntos</h2>
+        <img src={ImgMain} alt="" />
       </div>
     </div>
   );
 };
 
-export default UserLogin;
+export default UserSignUp;

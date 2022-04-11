@@ -4,6 +4,7 @@ import TagField from "../../TagField/TagField"
 import axios from 'axios'
 import "./Home.css";
 import { set } from "js-cookie";
+import RobsonLogo from '../../../assets/svg/logo.svg'
 
 const baseUrl = 'http://localhost:3001/'
 
@@ -50,20 +51,28 @@ export default () => {
   return (
     <div className="app">
       <div className="home-container">
-        <div className="header-container">
-          <div className="logo">Logo</div>
-
-          <div className="profile-image"></div>
-        </div>
+        <header className="header-container">
+          <nav>
+            <img src= {RobsonLogo} alt="" />
+            <ul className="ul-item">
+              <li >Encontre uma pessoa</li>
+              <li>Grupo de estudos</li>
+            </ul>
+          </nav>
+        </header>
         
         <div className="search-container">
-          <input name="searchField" type="text" className="search-field" onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
           <div className="search-filter">
-            <TagField tag={"java"} onClick={handleClick}/>
-            <TagField tag={"react"} onClick={handleClick}/>
-            <TagField tag={"Pessoas"} onClick={handleClick}/>
-            <TagField tag={"mongodb"} onClick={handleClick}/>
+            <TagField tag={"DEV's"} onClick={handleClick}/>
+            <TagField tag={"UX/UI Designers"} onClick={handleClick}/>
           </div>
+          <div className="input-group">
+            <div className="i-search">
+            <i id="icon-search" class="fas fa-search"></i>
+            </div>
+            <input name="searchField" type="text" className="search-field" id="search-input"onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
+          </div>
+          
         </div>
 
         {/* <div className="search-filter">
@@ -72,7 +81,7 @@ export default () => {
           <TagField tag={"PRODUTO"} />
         </div> */}
         <div>
-          <h1>Nossos #SangueLaranjas</h1>
+          <h1>Nossos #DEV's</h1>
         </div>
         <div className="cards-container">
           
