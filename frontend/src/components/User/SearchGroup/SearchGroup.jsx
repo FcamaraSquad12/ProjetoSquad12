@@ -7,19 +7,18 @@ import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
 import { useNavigate } from 'react-router-dom'
 
-const baseUrl = 'http://localhost:3001/'
+const baseUrl = 'http://localhost:3001/groups'
 
 export default () => {  
-  const [users, setUsers] = useState([]);
+  const [groups, setGroups] = useState([]);
   const [searchField, setSearchField] = useState('');     
   const [search, setSearch] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
       axios(baseUrl).then(resp => {
-          setUsers(resp.data);
+          setGroups(resp.data);
       })
-      
   },[])
 
   const handleChange = (e) => {
@@ -40,19 +39,12 @@ export default () => {
   }
 
   const renderCards = () => {
-    let found
-
     //if (search) {
-      return users.map((user) => 
+      return groups.map((group) => 
         {
-          found = false
-
-          return user.skills.map((skill) => {
-            if (!found && skill.search(search) != -1){
-              found = true
-              return <Card user={user}/>
-            }
-          })          
+          if (group.subject.search(search) != -1){
+            return <Card group={group}/>
+          }         
         }
       )
     //}

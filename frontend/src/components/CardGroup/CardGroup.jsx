@@ -1,15 +1,7 @@
 import React from "react";
 import "./CardGroup.css";
 
-export default () => {
-  const group = {
-    title: 'Criptos para jogar açai',
-    date: '27/04/2022',
-    time: '19:00/20:00',
-    subject: 'Cripto moedas',
-    link: '/aqui-seria-o-grupo'
-  }
-
+export default ({group}) => {
   return (
     <div className="card fade-in-fwd">
       <div className="card-body">

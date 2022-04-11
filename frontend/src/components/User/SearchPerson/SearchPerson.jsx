@@ -7,7 +7,7 @@ import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
 import { useNavigate } from 'react-router-dom'
 
-const baseUrl = 'http://localhost:3001/'
+const baseUrl = 'http://localhost:3001/people'
 
 export default () => {  
   const [users, setUsers] = useState([]);
@@ -19,7 +19,6 @@ export default () => {
       axios(baseUrl).then(resp => {
           setUsers(resp.data);
       })
-      
   },[])
 
   const handleChange = (e) => {

@@ -17,7 +17,7 @@ const personRoutes = require('./routes/personRoutes')
 app.use('/person', personRoutes);
 
 // SELECT PERSON
-app.use('/', personRoutes);
+app.use('/people', personRoutes);
 
 // SELECT PERSON FOR ID
 app.use('/person/:id', personRoutes);
@@ -36,7 +36,7 @@ const groupRoutes = require('./routes/groupRoutes')
 app.use('/groups', groupRoutes);
 
 // SELECT GROUP
-app.use('/', groupRoutes);
+app.use('/groups', groupRoutes);
 
 // SELECT GROUP FOR ID
 app.use('/group/:id', groupRoutes);

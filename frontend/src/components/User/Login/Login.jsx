@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 import './Login.css';
 
-const baseUrl = 'http://localhost:3001/'
+const baseUrl = 'http://localhost:3001/people'
 
 function initialState() {
   return {email: '', password: ''};

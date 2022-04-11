@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
 
   router.get('/', async (req, res) => {
     try {
-      const grupo = await Grupo.find()
+      const groups = await Group.find()
   
       res.status(200).set("Access-Control-Allow-Origin", "*").json(groups)
     } catch (error) {
