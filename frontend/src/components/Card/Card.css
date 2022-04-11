@@ -10,10 +10,10 @@
   display: flex;
   width: 270px;
   min-height: 300px;
-  background-color: orange;
+  background-color: none;
   flex-direction: column;
   align-items: center;
-  border-radius: 5px;
+  border-radius: none;
   padding: 0px;
   margin-left: 20px;
 }
@@ -24,6 +24,8 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
+  border: 2px solid rgb(0,0,0,0.2);
+  border-top: none;
 }
 
 .card-img-top{
@@ -45,10 +47,12 @@
 }
 
 .item-skill{
-  background-color: #d6d4d4c0;
+  background-color: none;
   margin-right: 10px;
   border-radius: 5px;
   padding: 0 2px;
+  color: #FE4400;
+  border: 2px solid #FE4400
 }
 .icon-item{
   display: flex;
@@ -65,6 +69,30 @@
 .fa-calendar-check{
   color: #1400c5;
 }
+
+
+.button-profile {
+  background-color: #474747;
+  color:#FFFFFF;
+  padding: 5px 9px;
+  width: 89px;
+  height: 34px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  margin-bottom: 5px;
+}
+
+.card-subtile {
+  margin-bottom: 5px;
+}
+
+
+
+
+
 
 .fade-in-fwd {
 	-webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;

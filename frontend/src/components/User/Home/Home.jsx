@@ -63,8 +63,8 @@ export default () => {
         
         <div className="search-container">
           <div className="search-filter">
-            <TagField tag={"react"} onClick={handleClick}/>
-            <TagField tag={"java"} onClick={handleClick}/>
+            <TagField tag={"DEV's"} onClick={handleClick}/>
+            <TagField tag={"UX/UI Designers"} onClick={handleClick}/>
           </div>
           <div className="input-group">
             <div className="i-search">
