@@ -9,6 +9,7 @@
   height: 100vh;
   width: 900px; 
   margin: 0 auto;
+  gap:20px;
 }
 .signup-logo-container {
  text-align: right;
