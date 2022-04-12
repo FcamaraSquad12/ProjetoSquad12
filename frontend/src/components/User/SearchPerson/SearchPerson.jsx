@@ -8,7 +8,7 @@ import RobsonLogo from '../../../assets/svg/logo.svg'
 import { useNavigate } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 
-const baseUrl = 'http://localhost:3001/people'
+const baseUrl = 'http://localhost:3001/people';
 
 export default () => {  
   const { activeUser } = useContext(StoreContext);
@@ -21,8 +21,6 @@ export default () => {
       axios(baseUrl).then(resp => {
           setUsers(resp.data);
       })
-
-      console.log(activeUser);
   },[])
 
   const handleChange = (e) => {
@@ -44,20 +42,19 @@ export default () => {
 
   const renderCards = () => {
     let found = false;
-   //if (search) {
-      return users.map((user) => 
-        {
-          found = false;
 
-          return user.skills.map((skill) => {
-            if (!found && skill.search(search) != -1){
-              found = true;
-              return <Card user={user}/>
-            }
-          })          
-        }
-      )
-    //}
+    return users.map((user) => 
+      {
+        found = false;
+
+        return user.skills.map((skill) => {
+          if (!found && activeUser._id != user._id && skill.search(search) != -1){
+            found = true;
+            return <Card user={user}/>
+          }
+        })          
+      }
+    )
   }
 
   return (
@@ -69,6 +66,7 @@ export default () => {
             <ul className="ul-item">
               <li className="selected-page">Encontre uma pessoa</li>
               <li onClick={handleFindGroup}>Grupo de estudos</li>
+              <li>{`Olá, ${activeUser.name}!`}</li>
             </ul>
           </nav>
         </header>
