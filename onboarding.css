@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 :root{
-    --prm-color: #FF7B42;
+    --prm-color: #FE662E;
     --prm-gray: #ADB5BD;
     --bgc-color: #F8F8F8;
     --azul-color: #36357E;
@@ -52,8 +52,26 @@ main{
 .text-card{
     text-align: center;
 }
+.text-card > h2 > span{
+    font-weight: 600;
+    color: var(--prm-color);
+}
+.text-card > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+}
+.text-card > p > span{
+    font-weight: 500;
+}
 .text-card > ul{
     list-style-position: inside;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
 }
 .logo{
     text-align: center;
@@ -103,6 +121,20 @@ main{
     margin-left: 15px;
 
 }
+.cardtwo{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 80px;
+}
+.quest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.quest > div{
+    margin:30px 0;
+}
 
 /* para personalizar a barra de progresso */
 #progress::-webkit-progress-value {
@@ -122,3 +154,36 @@ main{
       transform: scale(1);
     }
   }
+
+.ck-button {
+    margin:5px;
+    background: rgba(255, 255, 255, 1e-06);
+    border-radius:20px;
+    border: 1px solid #474747;;
+    margin-right: 20px;
+    overflow:auto;
+    float:left;
+}
+
+.ck-button label span {
+    text-align:center;
+    padding: 7px 13px;
+    display:block;
+    border-radius:20px;
+    
+}
+
+.ck-button label input {
+    visibility: hidden;
+    position:absolute;
+    top:-20px;
+    
+}
+input:checked +span{
+    background-color: #FE662E;
+    color:#fff;
+}
+.ck-button label:hover   {
+    background-color:#F8F9FA;
+}
+

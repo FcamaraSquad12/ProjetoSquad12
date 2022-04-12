@@ -1,21 +1,24 @@
-import React from "react";
-import "./Profile.css";
-import RobsonLogo from "../../../assets/svg/logo.svg";
-import ProfilePic from "../../../assets/svg/image2.svg";
+import React from 'react';
+import './Profile.css';
+import RobsonLogo from '../../../assets/svg/logo.svg';
+import ProfilePic from '../../../assets/svg/image2.svg';
+import Medium from '../../../assets/svg/mediumPic.svg';
+import Linkedin from '../../../assets/svg/linkedin.svg';
+import Drive from '../../../assets/svg/drivePic.svg';
 
 export default ({ user }) => {
   return (
     <div className="profile-page-container">
-        <header className="header-container">
+      <header className="header-container">
         <nav>
-                <img src={RobsonLogo} alt="" />
-                <ul className="ul-item">
-                   <li>Encontre uma pessoa</li>
-                   <li>Grupo de estudos</li>
-                </ul>
-            </nav>
-        </header>
-      
+          <img src={RobsonLogo} alt="" />
+          <ul className="ul-item">
+            <li>Encontre uma pessoa</li>
+            <li>Grupo de estudos</li>
+          </ul>
+        </nav>
+      </header>
+
       <div className="profile-container">
         <div className="profile-image-container">
           <img src={ProfilePic} alt="" />
@@ -24,36 +27,53 @@ export default ({ user }) => {
         <div className="profile-infos">
           <h1>{user.name}</h1>
           <h2>{user.profession}</h2>
-          <h3>{user.description}</h3>
-          <a href={user.calendly} target="_blank">Agendar</a>
+          <p>
+            {user.description} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad fugit voluptatibus,
+            cupiditate eos, velit, ipsa neque sit ut nemo aliquid corporis facere sunt molestiae ipsum alias dolorum
+            eveniet. Iure, eveniet?
+          </p>
+          <div className="contato">
+            <a className="agendar" href={user.calendly} target="_blank">
+              Agendar um horário
+            </a>
+            <a className="whats" href="#" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>Whatapp
+            </a>
+          </div>
         </div>
       </div>
 
       <div>
-        {(skills) => {
-          return skills.map((skill) => <span>#{skill}</span>);
-        }}
+        {user.skills.map((skill) => (
+          <span className="item-skill">{skill} </span>
+        ))}
       </div>
 
-      <div>
+      {<div className="redes-sociais">
         <div>
-          <img src="" alt="" />
-          <h2>Acesse meu portifólio</h2>
-          <a src={user.portfolio} href={user.portfolio} target="_blank">Portifólio</a>
+          <img src={Medium} alt="" />
+          <h2>Acesse meus artigos</h2>
+          <a src={user.portfolio} href={user.portfolio} target="_blank">
+            Medium
+          </a>
         </div>
 
         <div>
-          <img src="" alt="" />
+          <img src={Linkedin} alt="" />
           <h2>Acesse meu Linkedin</h2>
-          <a href={user.linkedin} target="_blank">Linkedin</a>
+          <a href={user.linkedin} target="_blank">
+            Linkedin
+          </a>
         </div>
 
         <div>
-          <img src="" alt="" />
-          <h2>Acesse meus arquivos</h2>
-          <a href={user.drive} target="_blank">Google Drive</a>
+          <img src={Drive} alt="" />
+          <h2>Acesse meu Drive</h2>
+          <a href={user.drive} target="_blank">
+            Google Drive
+          </a>
         </div>
-      </div>
+      </div>}
     </div>
   );
 };

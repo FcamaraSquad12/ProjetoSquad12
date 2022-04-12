@@ -44,8 +44,8 @@
                             <img src="./frontend/src/assets/svg/teampic.svg" alt="">
                         </div>
                         <div class="text-card">
-                            <h1>Olá Sangue Laranja, que bom ter você aqui!</h1>
-                            <h4>Você está prestes a se conectar à Rede Otimizada de Busca e Solução Orange Networking (ROBSON)</h4>
+                            <h2>Olá <span>Sangue Laranja</span>, que bom ter você aqui!</h2>
+                            <p>Você está prestes a se conectar à <span>ROBSON</span>: Rede Otimizada de Busca e Solução “Orange Networking”</p>
                             <ul>
                                 <li>Pessoas da FCamara com diversas skills prontas pra te ajudar ou precisando de sua ajuda.</li>
                                 <li>Grupos de estudos (crowdlearning) para compartilhar suas experiências e aprender coletivamente.</li>
@@ -64,14 +64,29 @@
                 <div class="card">
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="card-body">
-                            <div class="logo">
-                                <img src="frontend/src/assets/svg/logo.svg" alt="">
-                            </div>
-                            <div class="text-card">
-                                <h1>Bora mapear essas skills ai meu truta!</h1>
-                            </div>
-                            <div>
-                                <img src="./frontend/src/assets/svg/notification.svg" alt="">
+                            <div class="cardtwo">
+                                <img src="./frontend/src/assets/svg/profiling_onb.svg" alt="">
+                                <div class="quest">
+                                    <h2>Qual sua área dentro da empresa?</h2>
+                                    <div>
+                                        <div class="ck-button" ><label><input onclick="achar()" type="checkbox" name="sta_choice" id="develop" value="develop"><span>Design</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="design" value="design" ><span>Marketing</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Desenvolvimento</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Outro</span></label></div>
+                                    </div>
+                                    <h2>Quais suas especialidades?</h2>
+                                    <div class="especialidades">
+                                        <div class="ck-button" ><label><input onclick="achar()" type="checkbox" name="sta_choice" id="develop" value="develop"><span>UX Research</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="design" value="design" ><span>Prototipação</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>UX Writing</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Arquitetura da informação</span></label></div>
+                                        <div class="ck-button" ><label><input onclick="achar()" type="checkbox" name="sta_choice" id="develop" value="develop"><span>Teste de usabilidade</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="design" value="design" ><span>Pesquisa com usuário</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Design de Produto</span></label></div>
+                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Outro</span></label></div>
+                                    </div>
+                                </div>
+                                
                             </div>
                             <div class="btn-card-1">
                                 <button type="button" class="btn-1" id="btn-2" data-bs-toggle="collapse"
@@ -89,6 +104,7 @@
                         <div class="card-body">
                             <h1>Congratulations!</h1>
                             <p>Obrigado pelo Cadastro!!</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -116,17 +132,18 @@
             button.addEventListener('click', () => {
             progress.setAttribute('value', index * 100 /(stepButtons.length - 1) );//aqui tem 3 botões. 2 espaços.
 
-            stepButtons.forEach((item, secindex)=>{
-                if(index > secindex){
-                    item.classList.add('done');
-                    
-                }
-                if(index < secindex){
-                    item.classList.remove('done');
-                }
+                stepButtons.forEach((item, secindex)=>{
+                    if(index > secindex){
+                        item.classList.add('done');
+                        
+                    }
+                    if(index < secindex){
+                        item.classList.remove('done');
+                    }
+                })
             })
         })
-})
+       
     </script>
     <script src="https://kit.fontawesome.com/159e43023c.js" crossorigin="anonymous"></script>
 </body>
