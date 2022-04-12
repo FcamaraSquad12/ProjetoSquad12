@@ -5,6 +5,12 @@
 .profile-container{
     display: flex;
     margin-bottom: 5px;
+    position: static;
+    width: 970px;
+    margin: 0 auto;
+    z-index: 1;
+    background-color: #fff;
+    margin-top: 80px;
 }
 .profile-infos{
     color: #212529;
@@ -40,6 +46,11 @@
     padding: 8px 0;
     border-radius: 4px;
 }
+
+.agendar:hover{
+   font-size: 14px;
+}
+
 .whats{
     width: 140px;
     height: 38px;
@@ -54,14 +65,31 @@
     margin-right: 5px;
     color: #fe662e;
 }
+
+.whats:hover {
+    background-color:#fe662e;
+    color: #fff;
+}
+
+.whats:hover .fa-whatsapp{
+    color: #fff;
+}
+
 div > .item-skill{
    padding: 1px 5px;
 }
 
+div > .item-skill:hover{
+    background-color: #fe662e;
+    color: #fff;
+ }
+
 .redes-sociais{
     display: flex;
     justify-content: space-between;
+    margin: auto;
     margin-top: 50px;
+    width: 970px;
 }
 .redes-sociais div{
     border-radius: 4px;
@@ -80,4 +108,18 @@ div > .item-skill{
     font-weight: 400;
     color: #6C757D;
     padding: 10px;
+}
+
+.outdoor {
+    width: 1048px;
+    position:absolute;
+    z-index: -1;
+}
+
+.outdoor-img {
+    width:100%;   
+}
+
+.skills-container{
+    margin-left: 37px;
 }

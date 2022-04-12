@@ -2,6 +2,7 @@ import React from 'react';
 import './Profile.css';
 import RobsonLogo from '../../../assets/svg/logo.svg';
 import ProfilePic from '../../../assets/svg/image2.svg';
+import Outdoor from '../../../assets/svg/profilePic.svg';
 import Medium from '../../../assets/svg/mediumPic.svg';
 import Linkedin from '../../../assets/svg/linkedin.svg';
 import Drive from '../../../assets/svg/drivePic.svg';
@@ -30,6 +31,10 @@ export default ({ user }) => {
           </ul>
         </nav>
       </header>
+
+      <div className="outdoor">
+        <img className ="outdoor-img" src={Outdoor} alt="" />
+      </div>
       
       <div className="profile-container">
         <div className="profile-image-container">
@@ -49,13 +54,13 @@ export default ({ user }) => {
               Agendar um horário
             </a>
             <a className="whats" href="#" target="_blank">
-              <i class="fa-brands fa-whatsapp"></i>Whatapp
+              <i className="fa-brands fa-whatsapp"></i>WhatsApp
             </a>
           </div>
         </div>
       </div>
 
-      <div>
+      <div className="skills-container">
         {user.skills.map((skill) => (
           <span className="item-skill">{skill} </span>
         ))}
