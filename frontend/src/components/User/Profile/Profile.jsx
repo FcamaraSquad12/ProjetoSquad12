@@ -5,20 +5,32 @@ import ProfilePic from '../../../assets/svg/image2.svg';
 import Medium from '../../../assets/svg/mediumPic.svg';
 import Linkedin from '../../../assets/svg/linkedin.svg';
 import Drive from '../../../assets/svg/drivePic.svg';
+import { useNavigate } from 'react-router-dom';
 
 export default ({ user }) => {
+
+  const navigate = useNavigate();
+  const handleFindGroup = () => {
+    return navigate('/search-group')
+  }
+  const handleFindPerson = () => {
+    return navigate('/search-person')
+  }
+
+
   return (
     <div className="profile-page-container">
       <header className="header-container">
         <nav>
+
           <img src={RobsonLogo} alt="" />
           <ul className="ul-item">
-            <li>Encontre uma pessoa</li>
-            <li>Grupo de estudos</li>
+              <li onClick={handleFindPerson}>Encontre uma pessoa</li>
+              <li onClick={handleFindGroup}>Grupo de estudos</li>
           </ul>
         </nav>
       </header>
-
+      
       <div className="profile-container">
         <div className="profile-image-container">
           <img src={ProfilePic} alt="" />
