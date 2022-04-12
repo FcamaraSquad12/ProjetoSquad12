@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Card from "../../CardPerson/CardPerson"
 import TagField from "../../TagField/TagField"
 import axios from 'axios'
@@ -6,10 +6,12 @@ import "./SearchPerson.css";
 import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
 import { useNavigate } from 'react-router-dom'
+import StoreContext from 'components/Store/Context';
 
 const baseUrl = 'http://localhost:3001/people'
 
 export default () => {  
+  const { activeUser } = useContext(StoreContext);
   const [users, setUsers] = useState([]);
   const [searchField, setSearchField] = useState('');     
   const [search, setSearch] = useState([]);
@@ -19,35 +21,37 @@ export default () => {
       axios(baseUrl).then(resp => {
           setUsers(resp.data);
       })
+
+      console.log(activeUser);
   },[])
 
   const handleChange = (e) => {
       const { value } = e.target;
-      setSearchField(value)
-      setSearch(value)
-      return renderCards()
+      setSearchField(value);
+      setSearch(value);
+      return renderCards();
   };
 
   const handleClick = (e) => {
     const { name } = e.target;
-    setSearch(name)
-    return renderCards()
+    setSearch(name);
+    return renderCards();
   };
 
   const handleFindGroup = () => {
-    return navigate('/search-group')
+    return navigate('/search-group');
   }
 
   const renderCards = () => {
-    let found
+    let found = false;
    //if (search) {
       return users.map((user) => 
         {
-          found = false
+          found = false;
 
           return user.skills.map((skill) => {
             if (!found && skill.search(search) != -1){
-              found = true
+              found = true;
               return <Card user={user}/>
             }
           })          
@@ -92,7 +96,6 @@ export default () => {
           <h1>Nossos #DEV's</h1>
         </div>
         <div className="cards-container">
-          
           {renderCards()}
         </div>
       </div>

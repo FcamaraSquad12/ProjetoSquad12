@@ -8,8 +8,7 @@ import Linkedin from '../../../assets/svg/linkedin.svg';
 import Drive from '../../../assets/svg/drivePic.svg';
 import { useNavigate } from 'react-router-dom';
 
-export default ({ user }) => {
-
+export default ({user}) => {
   const navigate = useNavigate();
   const handleFindGroup = () => {
     return navigate('/search-group')
@@ -17,7 +16,6 @@ export default ({ user }) => {
   const handleFindPerson = () => {
     return navigate('/search-person')
   }
-
 
   return (
     <div className="profile-page-container">

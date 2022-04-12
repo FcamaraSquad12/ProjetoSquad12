@@ -17,7 +17,7 @@ function initialState() {
 
 const UserLogin = () => {
   const [values, setValues] = useState(initialState);
-  const { setToken } = useContext(StoreContext);
+  const {token, setToken, setActiveUser } = useContext(StoreContext);
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [statusMsg, setStatusMsg] = useState(false);
@@ -32,18 +32,18 @@ const UserLogin = () => {
   },[])
   
   function login({ email, password }) {
-    let loginSucess = false;
-
-    
     users.map((user) => {
-        if (email === user.email && password.toString() === user.password) return loginSucess = true;
+        if (email === user.email && password.toString() === user.password) {
+          setToken(user._id);
+          setActiveUser(user);
+        }
     });
 
-    if (loginSucess)
+    if (token)
     {
       console.log("acessou!!!")
       setStatusMsg('Hidden')
-      return { token: '1234' } 
+      return
     } else {
       setStatusMsg('visible')
     }
@@ -63,13 +63,8 @@ const UserLogin = () => {
   function onSubmit(e) {
     e.preventDefault();
 
-    const { token } = login(values)
-
-    if (token) {
-      setToken(token);
-      return navigate('/search-person')
-    }
-
+    login(values);
+    if (token) return navigate('/search-person');
     setValues(initialState);
   }
 
