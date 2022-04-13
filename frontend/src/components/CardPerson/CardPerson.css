@@ -7,7 +7,7 @@
 
 .card {
   display: flex;
-  width: 302px;
+  width: 299px;
   min-height: 300px;
   background-color: none;
   flex-direction: column;
@@ -153,12 +153,12 @@
     }
   }
   
-  @media screen and (max-width: 1272px) {
+  @media screen and (max-width: 1311px) {
     .card {
       width: 270px;
     }
   }
-  @media screen and (max-width: 777px) {
+  @media screen and (max-width: 802px) {
     .card {
       width: 200px;
     }
@@ -166,7 +166,7 @@
       width: 100%;
     }
   }
-  @media screen and (max-width: 602px) {
+  @media screen and (max-width: 627px) {
     .card {
       width: 302px;
     }
