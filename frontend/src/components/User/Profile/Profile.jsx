@@ -37,6 +37,11 @@ export default ({user}) => {
       <div className="profile-container">
         <div className="profile-image-container">
           <img src={ProfilePic} alt="" />
+          <div className="skills-container">
+            {user.skills.map((skill) => (
+              <span className="item-skill">{skill} </span>
+            ))}
+          </div>
         </div>
 
         <div className="profile-infos">
@@ -58,36 +63,28 @@ export default ({user}) => {
         </div>
       </div>
 
-      <div className="skills-container">
-        {user.skills.map((skill) => (
-          <span className="item-skill">{skill} </span>
-        ))}
-      </div>
-
       {<div className="redes-sociais">
-        <div>
+        
+        <a src={user.portfolio} href={user.portfolio} target="_blank">
           <img src={Medium} alt="" />
           <h2>Acesse meus artigos</h2>
-          <a src={user.portfolio} href={user.portfolio} target="_blank">
-            Medium
-          </a>
-        </div>
+          <p>Medium</p>
+        </a>
+        
 
-        <div>
+        <a href={user.linkedin} target="_blank">
           <img src={Linkedin} alt="" />
           <h2>Acesse meu Linkedin</h2>
-          <a href={user.linkedin} target="_blank">
-            Linkedin
-          </a>
-        </div>
+          <p>Linkedin</p>
+        </a>
 
-        <div>
+
+        <a href={user.drive} target="_blank">
           <img src={Drive} alt="" />
           <h2>Acesse meu Drive</h2>
-          <a href={user.drive} target="_blank">
-            Google Drive
-          </a>
-        </div>
+          <p>Google Drive</p>
+        </a>
+
       </div>}
     </div>
   );

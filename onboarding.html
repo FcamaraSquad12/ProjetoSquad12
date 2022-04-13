@@ -65,32 +65,177 @@
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="card-body">
                             <div class="cardtwo">
-                                <img src="./frontend/src/assets/svg/profiling_onb.svg" alt="">
+                                <img id="img-profile" src="./frontend/src/assets/svg/profiling_onb.svg" alt="">
+                                <img id="img-design" src="./frontend/src/assets/svg/profilingDesing.svg" alt="">
+                                <img id="img-develop" src="./frontend/src/assets/svg/profilingDevelop.svg" alt="">
+
                                 <div class="quest">
                                     <h2>Qual sua área dentro da empresa?</h2>
                                     <div>
-                                        <div class="ck-button" ><label><input onclick="achar()" type="checkbox" name="sta_choice" id="develop" value="develop"><span>Design</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="design" value="design" ><span>Marketing</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Desenvolvimento</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Outro</span></label></div>
+                                        <div class="ck-button" >
+                                            <label>
+                                                <input type="radio" name="sta_choice" id="design" value="design">
+                                                <span>Design</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="radio" name="sta_choice" id="marketing" value="marketing" >
+                                                <span>Marketing</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="radio" name="sta_choice" id="develop"  value="develop" >
+                                                <span>Desenvolvimento</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="radio" name="sta_choice" id="outro"  value="outro" >
+                                                <span>Recursos Humanos</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <h2>Qual seu cargo dentro da FCamara?</h2>
+                                    <div>
+                                        <div class="ck-button" >
+                                            <label>
+                                                <input type="radio" name="nivel" id="design" value="design">
+                                                <span>Trainee</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="radio" name="nivel" id="marketing" value="marketing" >
+                                                <span>Júnior</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="radio" name="nivel" id="develop"  value="develop" >
+                                                <span>Pleno</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="radio" name="nivel" id="outro"  value="outro" >
+                                                <span>Sênior</span>
+                                            </label>
+                                        </div>
                                     </div>
                                     <h2>Quais suas especialidades?</h2>
-                                    <div class="especialidades">
-                                        <div class="ck-button" ><label><input onclick="achar()" type="checkbox" name="sta_choice" id="develop" value="develop"><span>UX Research</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="design" value="design" ><span>Prototipação</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>UX Writing</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Arquitetura da informação</span></label></div>
-                                        <div class="ck-button" ><label><input onclick="achar()" type="checkbox" name="sta_choice" id="develop" value="develop"><span>Teste de usabilidade</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="design" value="design" ><span>Pesquisa com usuário</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Design de Produto</span></label></div>
-                                        <div class="ck-button"><label><input onclick="achar()" type="checkbox" name="sta_choice" id="produto"  value="produto" ><span>Outro</span></label></div>
+                                    <!-- ESPECIALIDADES DESIGN -->
+                                    <div class="pagDesign">
+                                        <div class="ck-button" >
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="UX Research">
+                                                <span>UX Research</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="Prototipação" >
+                                                <span>Prototipação</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="UX Writing" >
+                                                <span>UX Writing</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="Arquitetura da informação" >
+                                                <span>Arquitetura da informação</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button" >
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="Teste de usabilidade">
+                                                <span>Teste de usabilidade</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="Pesquisa com usuário" >
+                                                <span>Pesquisa com usuário</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="Design de Produto" >
+                                                <span>Design de Produto</span>
+                                            </label>
+                                        </div>
+                                        <div class="ck-button">
+                                            <label>
+                                                <input type="checkbox" name="sta_choice" value="Outro" >
+                                                <span>Outro</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                                                    <!-- ESPECIALIDADES DEVELOP -->
+                                <div class="pagDevelop">
+                                    <div class="ck-button" >
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="UX Research">
+                                            <span>React</span>
+                                        </label>
+                                    </div>
+                                    <div class="ck-button">
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="Prototipação" >
+                                            <span>JavaScript</span>
+                                        </label>
+                                    </div>
+                                    <div class="ck-button">
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="UX Writing" >
+                                            <span>C++</span>
+                                        </label>
+                                    </div>
+                                    <div class="ck-button">
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="Arquitetura da informação" >
+                                            <span>Laravel</span>
+                                        </label>
+                                    </div>
+                                    <div class="ck-button" >
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="Teste de usabilidade">
+                                            <span>Java</span>
+                                        </label>
+                                    </div>
+                                    <div class="ck-button">
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="Pesquisa com usuário" >
+                                            <span>MongoDB</span>
+                                        </label>
+                                    </div>
+                                    <div class="ck-button">
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="Design de Produto" >
+                                            <span>Cobol</span>
+                                        </label>
+                                    </div>
+                                    <div class="ck-button">
+                                        <label>
+                                            <input type="checkbox" name="sta_choice" value="Outro" >
+                                            <span>CSharp</span>
+                                        </label>
                                     </div>
                                 </div>
+                                </div>
+
+                            </div>
                                 
                             </div>
                             <div class="btn-card-1">
                                 <button type="button" class="btn-1" id="btn-2" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree">Avançar<i class="fa-solid fa-arrow-right-long"></i></button>
+                                data-bs-target="#collapseThree">Continuar<i class="fa-solid fa-arrow-right-long"></i></button>
                             </div>
                         </div>
                     </div>
@@ -99,11 +244,16 @@
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                         data-bs-parent="#accordionExample">
                         <div class="logo">
-                            <img src="frontend/src/assets/svg/logo.svg" alt="">
+                            <img src="frontend/src/assets/svg/profileFinal.svg" alt="">
                         </div>
                         <div class="card-body">
-                            <h1>Congratulations!</h1>
-                            <p>Obrigado pelo Cadastro!!</p>
+                            <h1>Agora você faz parte da ROBSON!!</h1>
+                            <p>Aproveite para tirar suas dúvidas, compartilhar suas experiências e indicar o seu conteúdo de referência!</p>
+                            <p>Fazer networking agora ficou fácil.</p> 
+                            <div class="btn-card-1">
+                                <button type="button" class="btn-1">Acessar Home Page<i class="fa-solid fa-arrow-right-long"></i></button>
+                            </div>  
+                            
                             
                         </div>
                     </div>
@@ -143,7 +293,29 @@
                 })
             })
         })
-       
+
+        const pagDesign = document.querySelector('.pagDesign');
+        const pagDevelop = document.querySelector('.pagDevelop');
+
+        const imgDevelop = document.getElementById('img-develop')
+        const imgDesign = document.getElementById('img-design')
+        const imgProfile = document.getElementById('img-profile')
+
+        const design = document.getElementById('design').addEventListener('click', () => {
+            pagDevelop.style.display = 'none';
+            pagDesign.style.display = 'flex';
+            imgProfile.style.display = 'none';
+            imgDevelop.style.display = 'none';
+            imgDesign.style.display = 'block';
+            
+        })
+        const develop = document.getElementById('develop').addEventListener('click', () => {
+            pagDesign.style.display = 'none';
+            pagDevelop.style.display = 'flex';
+            imgProfile.style.display = 'none';
+            imgDesign.style.display = 'none';
+            imgDevelop.style.display = 'block';
+        })
     </script>
     <script src="https://kit.fontawesome.com/159e43023c.js" crossorigin="anonymous"></script>
 </body>
