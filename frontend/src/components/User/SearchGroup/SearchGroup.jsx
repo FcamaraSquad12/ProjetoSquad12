@@ -8,7 +8,7 @@ import RobsonLogo from '../../../assets/svg/logo.svg'
 import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
 import { useNavigate } from 'react-router-dom'
 
-const baseUrl = 'http://localhost:3001/groups'
+const baseUrl = 'http://localhost:3001'
 
 export default () => {  
   const [groups, setGroups] = useState([]);
