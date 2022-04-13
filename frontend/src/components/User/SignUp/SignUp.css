@@ -5,14 +5,39 @@
 .signup-container{
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: top;
   width: 900px; 
   margin: 0 auto;
-  gap:20px;
 }
-.signup-logo-container {
- text-align: right;
+
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin: 0 auto;
+  line-height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 1px;
+  border-style: inset;
+}
+
+.signup-title {
+  font-size: 1.5rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.signup-form{
+  margin-top: 0px;
+}
+
+.signup-form-control{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #Signup-Robson-logo {
@@ -20,101 +45,13 @@
   height: 64px;
 }
 
-
-.signup-logo-container img {
-  width: 100%;
+#signup-img {
+  width: 80%;
+  margin-top: 50px;
 }
 
-.signup-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    height: 500px;
-    margin: 0 auto;
-    line-height: 40px;
-    background-color: white;
-    border-radius: 20px;
-    border-color: black;
-    border-width: 1px;
-    border-style: inset;
-}
-
-.signup-form{
-    margin-top: 0px;
-}
-
-.signup-form-control{
-    display: flex;
-    flex-direction: column;
-    height: 60px;
-    margin-bottom: 3px;
-}
-
-.btn-login {
-  height: var(--default-components-height);
-  border-radius: var(--default-components-border-radius);
-  background-color: var(--orange-color);
-  border: none;
-  display: block;
-  width: 100%;
-  color: white;
-}
-
-input {
-  height: var(--default-components-height);
-  padding: 0 20px;
-  border-radius: var(--default-components-border-radius);
-}
-
-label,input{
-     margin-right: 0 10px;
-     font-size: 1.2em;
-     color: rgb(80, 80, 80);
-}
-
-.signup-title {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-
-#sing-up {
-  color: var(--orange-color);
-}
-
-
-
-@media screen and (max-width: 450px) {
-    .container{
-        width: 90%;
-    }
-}
-
- .scale-up-center{
-	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+.signup-logo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
