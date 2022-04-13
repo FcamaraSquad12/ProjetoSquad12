@@ -1,187 +1,202 @@
 :root {
     --width-size: 40px;
   
-  }
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.home-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.header-container {
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  border-bottom: 2px solid #FE4400;
+
+}
+
+  li:hover {
+  color: #FE662E;
+  cursor: pointer;
+}
+
+.selected-page {
+  color: #FE662E;
+}
+
+.header-container nav img {
+  height: 40px;
+  width: 166px;
+  margin-bottom: 8px;
+}
+.logo{
+  background-color: silver;
+  width: 100px;
+}
+
+.navbar {
+  width: 300px;
+}
+
+.profile-image {
+  border-radius: 100%;
+  width: var(--width-size);
+  height: var(--width-size);
+  background-color: purple;
+}
+
+.label-header {
+  border-radius: 10px;
+  width: 300px;
+  height: var(--width-size);
+}
+
+.search-container {
+  display: inline-flex;
+  width: 100%;
+  gap: 30px;
+  margin-bottom: 10px;
+  /* background-color: purple; */
+  /* border-radius: 17px; */
+  margin-top: 50px;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dashed #949494;
+}
+
+.search-container input{
+  width: 570px;
+  margin-right: 40px;
+  border-left:none;
+  background-color: none;
+  color: var(--orange-color);
+  outline: none;
+  border: 1px solid #E5E5E5;
+
+}
+
+.search-field {
+  border-radius: 0 5px 5px 0;
+  text-align: space-between;
+  color: white;
+  padding: 0 20px;
+}
+
+.search-filter {
+  display: flex;
+  gap: 16px;
+}
+.search-span{
+  height: 44px;
+}
+
+.cards-container{
+  justify-content:left;
+  gap: 30px; 
+  flex-wrap: wrap;
+}
+
+.i-search {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 48px;
+  width: 48px;
+  background-color: #FE662E;
+  color: white;
+  border-radius: 5px 0 0 5px;
+
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+#search-input {
+  border-radius: none;
+}
+
+#search-input::placeholder {
+  text-align: center;
+}
+
+footer{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 90px;
+  border-top: 1px solid #FE662E;;
+}
+
   
-  .App {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .home-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-direction: row;
-  }
-  
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-  }
-  
-  .header-container {
-    display:flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 40px;
-    border-bottom: 2px solid #FE4400;
-  
-  }
-  
-   li:hover {
-    color: #FE662E;
-    cursor: pointer;
-  }
-  
-  .selected-page {
-    color: #FE662E;
-  }
-  
-  .header-container nav img {
-    height: 40px;
-    width: 166px;
-    margin-bottom: 8px;
-  }
-  .logo{
-    background-color: silver;
-    width: 100px;
-  }
-  
-  .navbar {
-    width: 300px;
-  }
-  
-  .profile-image {
-    border-radius: 100%;
-    width: var(--width-size);
-    height: var(--width-size);
-    background-color: purple;
-  }
-  
-  .label-header {
-    border-radius: 10px;
-    width: 300px;
-    height: var(--width-size);
-  }
-  
-  .search-container {
-    display: inline-flex;
-    width: 100%;
-    gap: 30px;
+@media screen and (max-width: 1180px) {
+  .input-group{
     margin-bottom: 10px;
-    /* background-color: purple; */
-    /* border-radius: 17px; */
-    margin-top: 50px;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px dashed #949494;
   }
-  
-  .search-container input{
-    width: 570px;
-    margin-right: 40px;
-    border-left:none;
-    background-color: none;
-    color: var(--orange-color);
-    outline: none;
-    border: 1px solid #E5E5E5;
-  
+  .search-container{
+    flex-direction: column-reverse;
+    margin-top: 20px;
+    justify-content: flex-end;
+    gap: 0;
   }
-  
-  .search-field {
-    border-radius: 0 5px 5px 0;
-    text-align: space-between;
-    color: white;
-    padding: 0 20px;
-  }
-  
-  .search-filter {
-    display: flex;
-    gap: 16px;
-  }
-  .search-span{
-    height: 44px;
-  }
-  
   .cards-container{
-    justify-content:left;
-    gap: 30px; 
-    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
   }
-  
-  .i-search {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height: 48px;
-    width: 48px;
-    background-color: #FE662E;
-    color: white;
-    border-radius: 5px 0 0 5px;
-  
+  .search-filter{
+    margin-bottom: 10px;
   }
-  
-  .input-group {
-    display: flex;
-    margin-bottom: 32px;
+}
+
+@media screen and (max-width: 675px) {
+  nav{
+    flex-direction: column;
+    
   }
-  
-  #search-input {
-    border-radius: none;
+  nav > ul{
+    margin-top: 10px;
+    
   }
-  
-  #search-input::placeholder {
-    text-align: center;
-  }
-  
-  @media screen and (max-width: 1180px) {
-    .input-group{
-      margin-bottom: 10px;
-    }
-    .search-container{
-      flex-direction: column-reverse;
-      margin-top: 20px;
-      justify-content: flex-end;
-      gap: 0;
-    }
-    .cards-container{
-      width: 100%;
-      justify-content: space-evenly;
-    }
-    .search-filter{
-      margin-bottom: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 675px) {
-    nav{
-      flex-direction: column;
-      
-    }
-    nav > ul{
-      margin-top: 10px;
-      
-    }
+  .i-search{
+    width:60px;
   }
 
-  footer{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 90px;
-    border-top: 1px solid #FE662E;;
+}
+@media screen and (max-width: 490px){
+  .i-search{
+    width:90px;
   }
+  .search-container input{
+    width: 100%;
+    margin-right: 10px;
+  }
+}
 
+  
  

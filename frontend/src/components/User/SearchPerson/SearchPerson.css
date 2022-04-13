@@ -13,6 +13,12 @@
   width: 80%;
   margin: 0 auto;
 }
+.container-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
 
 nav {
   display: flex;
@@ -39,7 +45,7 @@ nav ul {
 
 }
 
- li:hover {
+li:hover {
   color: #FE662E;
   cursor: pointer;
 }
@@ -143,6 +149,10 @@ nav ul {
   text-align: center;
 }
 
+.footer-container > footer{
+  margin-top: 10px;
+}
+
 @media screen and (max-width: 1180px) {
   .input-group{
     margin-bottom: 10px;
@@ -162,7 +172,17 @@ nav ul {
   }
 }
 
+@media screen and (max-width: 990px) {
+  .footer-robson-logo > img, .footer-fcamara-logo > img{
+    width: 200px;
+    margin-top: 5px;
+  }
+}
+
 @media screen and (max-width: 675px) {
+  .cards-container{
+    margin: auto;
+  }
   nav{
     flex-direction: column;
     
@@ -170,6 +190,18 @@ nav ul {
   nav > ul{
     margin-top: 10px;
     
+  }
+  .ul-item{
+    margin-bottom: 10px;
+  }
+  .footer-robson-logo > img, .footer-fcamara-logo > img{
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 627px){
+  .cards{
+    width: 302px;
   }
 }
 

@@ -2,6 +2,9 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
+const cors = require('cors')
+
+app.use(cors())
 
 app.use(
   express.urlencoded({
@@ -14,38 +17,37 @@ app.use(express.json())
 const personRoutes = require('./routes/personRoutes')
 
 // INSERT PERSON
-app.use('/person', personRoutes);
+app.use('/', personRoutes);
 
 // SELECT PERSON
-app.use('/people', personRoutes);
+app.use('/', personRoutes);
 
 // SELECT PERSON FOR ID
-app.use('/person/:id', personRoutes);
+app.use('/people/:id', personRoutes);
 
 // UPDATE PERSON
-app.use('/person/:id', personRoutes);
+app.use('/people/:id', personRoutes);
 
 // DELETE PERSON
-app.use('/person/:id', personRoutes);
-
+app.use('/people/:id', personRoutes);
 
 ////////////////// GROUP COLLECTION FUNCTIONS /////////////////
 const groupRoutes = require('./routes/groupRoutes')
 
 // INSERT GROUP
-app.use('/groups', groupRoutes);
+app.use('/', groupRoutes);
 
 // SELECT GROUP
-app.use('/groups', groupRoutes);
+app.use('/', groupRoutes);
 
 // SELECT GROUP FOR ID
-app.use('/group/:id', groupRoutes);
+app.use('/groups/:id', groupRoutes);
 
 // UPDATE GROUP
-app.use('/group/:id', groupRoutes);
+app.use('/groups/:id', groupRoutes);
 
 // DELETE GROUP
-app.use('/group/:id', groupRoutes);
+app.use('/groups/:id', groupRoutes);
 
 const DB_USER = process.env.DB_USER
 const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)

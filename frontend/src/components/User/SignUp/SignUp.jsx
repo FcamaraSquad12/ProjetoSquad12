@@ -13,17 +13,29 @@ const baseUrl = "http://localhost:3001/";
 
 function initialState() {
   return {
-    name: "",
-    profession: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-    portfolio: "",
-    whatsapp: "",
-    linkedin: "",
-    drive: "",
-    skills:[],
-    skillField: ""
+    // name: "",
+    // profession: "",
+    // email: "",
+    // password: "",
+    // confirmPassword: "",
+    // portfolio: "",
+    // whatsapp: "",
+    // linkedin: "",
+    // drive: "",
+    // skills:[],
+    // skillField: ""
+    
+      name: 'Teste',
+      profession: 'Teste',
+      email: 'teste@teste.com',
+      password: 'Teste',
+      confirmPassword: 'Teste',
+      portfolio: 'Teste',
+      whatsapp: 'Teste',
+      linkedin: 'Teste',
+      drive: 'Teste',
+      skills: ['java', 'react'],
+      skillField: 'react, java'
   };
 }
 

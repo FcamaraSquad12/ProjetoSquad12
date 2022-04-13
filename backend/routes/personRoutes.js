@@ -2,6 +2,16 @@ const router = require('express').Router();
 
 const Person = require('../models/Person')
 
+router.get('/people', async (req, res) => {
+  try {
+    const people = await Person.find()
+
+    res.status(200).set("Access-Control-Allow-Origin", "*").json(people)
+  } catch (error) {
+    res.status(500).json({ erro: error })
+  }
+})
+
 router.post('/', async (req, res) => {
   const { name, profession, description, email, password, skills, whatsapp, calendly, portfolio, linkedin, drive } = req.body
 
@@ -22,19 +32,9 @@ router.post('/', async (req, res) => {
   try {
     await Person.create(person)
 
-    res.status(201).set("Access-Control-Allow-Origin", "*").json({ message: 'Pessoa inserida no sistema com sucesso!' })
+    res.status(201).set('Access-Control-Allow-Methods', '*').json({ message: 'Pessoa inserida no sistema com sucesso!' })
   } catch (error) {
-    res.status(500).set("Access-Control-Allow-Origin", "*").json({ erro: error })
-  }
-})
-
-router.get('/', async (req, res) => {
-  try {
-    const people = await Person.find()
-
-    res.status(200).set("Access-Control-Allow-Origin", "*").json(people)
-  } catch (error) {
-    res.status(500).json({ erro: error })
+    res.status(500).set('Access-Control-Allow-Methods', '*').json({ erro: error })
   }
 })
 

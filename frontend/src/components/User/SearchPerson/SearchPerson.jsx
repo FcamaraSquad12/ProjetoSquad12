@@ -98,25 +98,21 @@ export default () => {
         <div>
           <h1>Nossos #DEV's</h1>
         </div>
-        <div className="cards-container">
-          {renderCards()}
-        </div>
+        <div className="container-body">
+          <div className="cards-container">
+            {renderCards()}
+          </div>
 
-        <div className="footer-container">
-          <footer>
-            <div className="footer-robson-logo">
-              <img src={RobsonLogo} alt="" />
-            </div>
-            <div className="footer-links">
-              <ul>
-              <li onClick={handleFindPerson}>Encontre uma pessoa</li>
-              <li onclick={handleFindGroup}>Grupo de estudos</li>
-              </ul>
-            </div>
-            <div className="footer-fcamara-logo">
-              <img src={FcamaraLogo} alt="" />
-            </div>
-          </footer>
+          <div className="footer-container">
+            <footer>
+              <div className="footer-robson-logo">
+                <img src={RobsonLogo} alt="" />
+              </div>
+              <div className="footer-fcamara-logo">
+                <img src={FcamaraLogo} alt="" />
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     </div>
