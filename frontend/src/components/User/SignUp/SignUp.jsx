@@ -20,7 +20,6 @@ function initialState() {
     confirmPassword: "",
     portfolio: "",
     whatsapp: "",
-    portfolio: "",
     linkedin: "",
     drive: "",
     skills:[],
@@ -30,7 +29,7 @@ function initialState() {
 
 const UserSignUp = () => {
   const [values, setValues] = useState(initialState);
-  const { setToken } = useContext(StoreContext);
+  const { token, setToken, setActiveUser } = useContext(StoreContext);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -43,11 +42,22 @@ const UserSignUp = () => {
     const method = user._id ? 'put' : 'post'
     const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
 
-    // axios[method](url, user)
-    //   .then(resp => {
-    //       this.setState({ user: initialState.user, list })
-    //     }
-    //   )
+    axios[method](url, user)
+      .then(resp => {
+          setActiveUser({
+            name: values.name,
+            profession: values.profession,
+            email: values.email,
+            password: values.password,
+            portfolio: values.portfolio,
+            whatsapp: values.whatsapp,
+            linkedin: values.linkedin,
+            drive: values.drive,
+            skills: values.skillField.split(' ')
+          })
+          console.log(resp.data);
+        }
+      )
   } 
 
   function handleChange(e) {
@@ -61,15 +71,9 @@ const UserSignUp = () => {
 
   function onSubmit(e) {
     e.preventDefault();
-
-    const { token } = save(values);
-
-    if (token) {
-      setToken(token);
-      return navigate("/home");
-    }
-
-    setValues(initialState);
+    console.log(token);
+    save(values);
+    if (token) return navigate('/search-person');
   }
 
   return (
@@ -210,11 +214,6 @@ const UserSignUp = () => {
             />
           </div>
 
-          {
-            // Msg de usuário ou senha inválida removida
-            //<label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida</label>
-          }
-
           <UIButton type="submit" theme="" className="btn-login" rounded>
             Entrar
           </UIButton>
@@ -229,14 +228,6 @@ const UserSignUp = () => {
             </p>
             : {}
           }
-          
-
-          <p>
-              Já tem cadastro?{" "}
-              <Link id="Sign-up" to="/login">
-                Entre
-              </Link>
-            </p>
         </form>
       </div>
       <div className="signup-logo-container scale-up-center">
