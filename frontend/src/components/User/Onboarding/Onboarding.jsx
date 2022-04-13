@@ -7,6 +7,7 @@ import ImgMain from "../../../assets/svg/img-signup.svg";
 import RobsonLogo from "../../../assets/svg/logo.svg";
 import { Link } from "react-router-dom";
 
+
 const baseUrl = "http://localhost:3001/";
 
 function initialState() {
@@ -25,7 +26,7 @@ function initialState() {
   };
 }
 
-const Onboarding = () => {
+const UserOnboarding = () => {
   const [values, setValues] = useState(initialState);
   const { token, setToken, setActiveUser } = useContext(StoreContext);
   const navigate = useNavigate();
@@ -76,11 +77,6 @@ const Onboarding = () => {
 
   return (
     <div className="signup-container">
-      {/* <div className="signup-logo-container scale-up-center">
-        <img id="Signup-Robson-logo" src={RobsonLogo} alt="" />
-        <h2>Você está há alguns passos de mudar</h2>
-        <h2>totalmente seu networking!</h2>
-      </div> */}
       <div className="signup-content scale-up-center">
         <label className="signup-title">Dados Pessoais</label>
         <form className="signup-form" autoComplete="" onSubmit={onSubmit}>
@@ -231,20 +227,4 @@ const Onboarding = () => {
   );
 };
 
-export default Onboarding;
-
-
-{/* <UIButton type="submit" theme="" className="btn-login" rounded>
-            Entrar
-          </UIButton>
-
-          {
-            !values._id ? 
-            <p>
-              Já tem cadastro?{" "}
-              <Link id="Sign-up" to="/login">
-                Entre
-              </Link>
-            </p>
-            : {}
-          } */}
+export default UserOnboarding;
