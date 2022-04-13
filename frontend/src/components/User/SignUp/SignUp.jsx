@@ -14,13 +14,17 @@ const baseUrl = "http://localhost:3001/";
 function initialState() {
   return {
     name: "",
+    profession: "",
     email: "",
     password: "",
+    confirmPassword: "",
     portfolio: "",
     whatsapp: "",
     portfolio: "",
     linkedin: "",
     drive: "",
+    skills:[],
+    skillField: ""
   };
 }
 
@@ -28,37 +32,23 @@ const UserSignUp = () => {
   const [values, setValues] = useState(initialState);
   const { setToken } = useContext(StoreContext);
   const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
-  const [statusMsg, setStatusMsg] = useState(false);
-  const [confirmPassword, setConfirmPassword] = useState("");
 
   useEffect(() => {
-    axios(baseUrl).then((resp) => {
-      setUsers(resp.data);
-    });
-
     setToken("");
-    setStatusMsg("hidden");
   }, []);
 
-  function login({ email, password }) {
-    let loginSucess = false;
+  const save = () => {
+    const user = values
+    console.log(user)
+    const method = user._id ? 'put' : 'post'
+    const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
 
-    users.map((user) => {
-      if (email === user.email && password.toString() === user.password)
-        return (loginSucess = true);
-    });
-
-    if (loginSucess) {
-      console.log("acessou!!!");
-      setStatusMsg("Hidden");
-      return { token: "1234" };
-    } else {
-      setStatusMsg("visible");
-    }
-
-    return { error: "Usuário ou senha inválida" };
-  }
+    // axios[method](url, user)
+    //   .then(resp => {
+    //       this.setState({ user: initialState.user, list })
+    //     }
+    //   )
+  } 
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -72,7 +62,7 @@ const UserSignUp = () => {
   function onSubmit(e) {
     e.preventDefault();
 
-    const { token } = login(values);
+    const { token } = save(values);
 
     if (token) {
       setToken(token);
@@ -97,7 +87,7 @@ const UserSignUp = () => {
               name="name"
               autoComplete="off"
               onChange={handleChange}
-              value={values.email}
+              value={values.name}
               placeholder="Digite seu nome"
             />
           </div>
@@ -133,9 +123,10 @@ const UserSignUp = () => {
               <b>Confirmar Senha</b>
             </label>
             <input
+              name="confirmPassword"
               type="password"
               onChange={handleChange}
-              value={confirmPassword}
+              value={values.confirmPassword}
               placeholder="Confirmar senha"
             />
           </div>
@@ -159,9 +150,9 @@ const UserSignUp = () => {
             <input
               id="drive"
               type="text"
-              name="drive"
+              name="profession"
               onChange={handleChange}
-              value={values.drive}
+              value={values.profession}
               placeholder="Cargo"
             />
           </div>
@@ -170,11 +161,11 @@ const UserSignUp = () => {
               <b>Adicione suas skills</b>
             </label>
             <input
-              id="skills"
+              id="skillField"
               type="text"
-              name="skills"
+              name="skillField"
               onChange={handleChange}
-              value={values.portfolio}
+              value={values.skillField}
               placeholder="Skills"
             />
           </div>
@@ -210,9 +201,9 @@ const UserSignUp = () => {
               <b>LinkedIn</b>
             </label>
             <input
-              id="LinkedIn"
+              id="linkedIn"
               type="text"
-              name="LinkedIn"
+              name="linkedin"
               onChange={handleChange}
               value={values.linkedin}
               placeholder="LinkedIn"
@@ -227,12 +218,25 @@ const UserSignUp = () => {
           <UIButton type="submit" theme="" className="btn-login" rounded>
             Entrar
           </UIButton>
+
+          {
+            !values._id ? 
+            <p>
+              Já tem cadastro?{" "}
+              <Link id="Sign-up" to="/login">
+                Entre
+              </Link>
+            </p>
+            : {}
+          }
+          
+
           <p>
-            Já tem cadastro?{" "}
-            <Link id="Sign-up" to="/login">
-              Entre
-            </Link>
-          </p>
+              Já tem cadastro?{" "}
+              <Link id="Sign-up" to="/login">
+                Entre
+              </Link>
+            </p>
         </form>
       </div>
       <div className="signup-logo-container scale-up-center">
