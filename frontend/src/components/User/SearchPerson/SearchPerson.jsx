@@ -5,6 +5,7 @@ import axios from 'axios'
 import "./SearchPerson.css";
 import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
+import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
 import { useNavigate } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
 
@@ -38,6 +39,10 @@ export default () => {
 
   const handleFindGroup = () => {
     return navigate('/search-group');
+  }
+
+  const handleFindPerson = () => {
+    return navigate('/search-person')
   }
 
   const renderCards = () => {
@@ -95,6 +100,23 @@ export default () => {
         </div>
         <div className="cards-container">
           {renderCards()}
+        </div>
+
+        <div className="footer-container">
+          <footer>
+            <div className="footer-robson-logo">
+              <img src={RobsonLogo} alt="" />
+            </div>
+            <div className="footer-links">
+              <ul>
+              <li onClick={handleFindPerson}>Encontre uma pessoa</li>
+              <li onclick={handleFindGroup}>Grupo de estudos</li>
+              </ul>
+            </div>
+            <div className="footer-fcamara-logo">
+              <img src={FcamaraLogo} alt="" />
+            </div>
+          </footer>
         </div>
       </div>
     </div>

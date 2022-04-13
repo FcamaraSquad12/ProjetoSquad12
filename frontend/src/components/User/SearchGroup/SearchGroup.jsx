@@ -5,6 +5,7 @@ import axios from 'axios'
 import "./SearchGroup.css";
 import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
+import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
 import { useNavigate } from 'react-router-dom'
 
 const baseUrl = 'http://localhost:3001/groups'
@@ -34,8 +35,12 @@ export default () => {
     return renderCards()
   };
 
-  const handleFindGroup = () => {
+  const handleFindPerson = () => {
     return navigate('/search-person')
+  }
+
+  const handleFindGroup = () => {
+    return navigate('/search-group');
   }
 
   const renderCards = () => {
@@ -57,7 +62,7 @@ export default () => {
           <nav>
             <img src= {RobsonLogo} alt="" />
             <ul className="ul-item">
-              <li onClick={handleFindGroup}>Encontre uma pessoa</li>
+              <li onClick={handleFindPerson}>Encontre uma pessoa</li>
               <li className="selected-page">Grupo de estudos</li>
             </ul>
           </nav>
@@ -89,6 +94,24 @@ export default () => {
           
           {renderCards()}
         </div>
+
+        <div className="footer-container">
+          <footer>
+            <div className="footer-robson-logo">
+              <img src={RobsonLogo} alt="" />
+            </div>
+            <div className="footer-links">
+              <ul>
+              <li onClick={handleFindPerson}>Encontre uma pessoa</li>
+              <li onclick={handleFindGroup}>Grupo de estudos</li>
+              </ul>
+            </div>
+            <div className="footer-fcamara-logo">
+              <img src={FcamaraLogo} alt="" />
+            </div>
+          </footer>
+        </div>
+
       </div>
     </div>
   )

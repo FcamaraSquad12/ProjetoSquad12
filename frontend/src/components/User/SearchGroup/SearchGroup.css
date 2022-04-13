@@ -174,3 +174,14 @@
       
     }
   }
+
+  footer{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px;
+    border-top: 1px solid #FE662E;;
+  }
+
+ 
