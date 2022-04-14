@@ -10,9 +10,11 @@ import { useNavigate } from 'react-router-dom';
 
 export default ({user}) => {
   const navigate = useNavigate();
+  
   const handleFindGroup = () => {
     return navigate('/search-group')
   }
+  
   const handleFindPerson = () => {
     return navigate('/search-person')
   }
@@ -22,7 +24,7 @@ export default ({user}) => {
       <header className="header-container">
         <nav>
 
-          <img src={RobsonLogo} alt="" />
+          <img onClick={handleFindPerson} src={RobsonLogo} alt="" />
           <ul className="ul-item">
               <li onClick={handleFindPerson}>Encontre uma pessoa</li>
               <li onClick={handleFindGroup}>Grupo de estudos</li>

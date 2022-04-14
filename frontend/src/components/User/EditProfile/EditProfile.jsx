@@ -57,7 +57,7 @@ export default () => {
 
         <header className="header-container">
           <nav>
-            <img src={RobsonLogo} alt="" />
+            <img onClick={handleFindPerson} src={RobsonLogo} alt="" />
             <ul className="ul-item">
                 <li onClick={handleFindPerson}>Encontre uma pessoa</li>
                 <li onClick={handleFindGroup}>Grupo de estudos</li>
