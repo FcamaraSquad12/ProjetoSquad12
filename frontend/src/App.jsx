@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Onboarding from "./pages/Onboarding/Onboarding.jsx";
 import Profile from "./pages/Profile/Profile";
+import EditProfile from "./pages/EditProfile/EditProfile";
 import SearchPerson from "./components/User/SearchPerson/SearchPerson";
 import SearchGroup from "./components/User/SearchGroup/SearchGroup";
 
@@ -18,6 +19,7 @@ const PagesRoot = () => {
             <Route path="/search-person" element={<SearchPerson/>} />
             <Route path="/search-group" element={<SearchGroup/>} />
             <Route path="/profile" element={<Profile/>} />
+            <Route path="/editprofile" element={<EditProfile/>} />
             <Route path="/onboarding" element={<Onboarding/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route path="/" element={<Login/>} />
