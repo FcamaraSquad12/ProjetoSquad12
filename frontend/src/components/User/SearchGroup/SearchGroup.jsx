@@ -25,7 +25,7 @@ export default () => {
   const handleChange = (e) => {
       const { value } = e.target;
       setSearchField(value)
-      setSearch(value)
+      setSearch(value.toLowerCase())
       return renderCards()
   };
 
@@ -43,7 +43,7 @@ export default () => {
     //if (search) {
       return groups.map((group) => 
         {
-          if (group.subject.search(search) != -1){
+          if (group.subject.toLowerCase().search(search) != -1){
             return <Card group={group}/>
           }         
         }
@@ -71,7 +71,7 @@ export default () => {
           </div>
           <div className="input-group">
             <div className="i-search">
-            <i id="icon-search" class="fas fa-search"></i>
+              <i id="icon-search" class="fas fa-search"></i>
             </div>
             <input name="searchField" type="text" className="search-field" id="search-input"onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
           </div>

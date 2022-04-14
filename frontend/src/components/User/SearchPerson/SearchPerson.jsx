@@ -33,7 +33,7 @@ export default () => {
 
   const handleClick = (e) => {
     const { name } = e.target;
-    setSearch(name);
+    setSearch(name.toLowerCase());
     return renderCards();
   };
 
@@ -53,7 +53,7 @@ export default () => {
         found = false;
 
         return user.skills.map((skill) => {
-          if (!found && activeUser._id != user._id && skill.search(search) != -1){
+          if (!found && (user.name.toLowerCase().includes(search) || activeUser._id != user._id && skill.toLowerCase().search(search) != -1)){
             found = true;
             return <Card user={user}/>
           }
@@ -83,9 +83,9 @@ export default () => {
           </div>
           <div className="input-group">
             <div className="i-search">
-            <i id="icon-search" class="fas fa-search"></i>
+              <i id="icon-search" class="fas fa-search"></i>
             </div>
-            <input name="searchField" type="text" className="search-field" id="search-input"onChange={handleChange} value={searchField} placeholder="Pesquisar"/>
+            <input name="searchField" type="text" className="search-field" id="search-input"onChange={handleChange} value={searchField} placeholder="Pesquisar por nome ou skill"/>
           </div>
           
         </div>
