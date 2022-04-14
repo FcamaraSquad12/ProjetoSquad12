@@ -42,21 +42,18 @@ export default class App extends Component {
             <div className="step" data-target="#test-l-1">
               <button className="step-trigger">
                 <span className="bs-stepper-circle">1</span>
-                <span className="bs-stepper-label">Email</span>
               </button>
             </div>
-            <div className="line"></div>
+            <div className="line" id='line' value={0} max={100}></div>
             <div className="step" data-target="#test-l-2">
               <button className="step-trigger">
                 <span className="bs-stepper-circle">2</span>
-                <span className="bs-stepper-label">Password</span>
               </button>
             </div>
             <div className="line"></div>
             <div className="step" data-target="#test-l-3">
               <button className="step-trigger">
                 <span className="bs-stepper-circle">3</span>
-                <span className="bs-stepper-label">Validate</span>
               </button>
             </div>
           </div>
@@ -64,7 +61,7 @@ export default class App extends Component {
           <div className="bs-stepper-content">
             <div id="test-l-1" className="content">
             <Step1/>
-            <button className="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
+            <button className="btn-1" onClick={() => this.stepper.next()}>Seguir para o cadastro</button>
             </div>
 
             <div id="test-l-2" className="content">
@@ -74,7 +71,7 @@ export default class App extends Component {
 
             <div id="test-l-3" className="content">
             <Step3/>
-            <button className="btn btn-primary" onClick={this.handleGoToHome}>Acessar</button>
+            <button className="btn-1" onClick={this.handleGoToHome}>Acessar Home Page</button>
             </div>
           </div>
         </div>
