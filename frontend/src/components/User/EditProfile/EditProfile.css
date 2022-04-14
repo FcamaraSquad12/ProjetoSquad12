@@ -6,7 +6,7 @@
     display: flex;
     margin-bottom: 5px;
     position: static;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     z-index: 1;
     background-color: #fff;
@@ -121,7 +121,7 @@ div > .item-skill:hover{
     padding: 10px;
 }
 .outdoor {
-    width: 77%;
+    width: 80%;
     position:absolute;
     z-index: -1;
 }

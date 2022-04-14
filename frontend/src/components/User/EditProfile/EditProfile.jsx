@@ -53,7 +53,7 @@ export default () => {
 
   return (
     <div className="profile-page-container">
-      <form className="signup-container" autoComplete="" onSubmit={onSubmit}>
+      <form className="" autoComplete="" onSubmit={onSubmit}>
 
         <header className="header-container">
           <nav>
@@ -97,23 +97,24 @@ export default () => {
 
                 <label><b>Whatsapp</b></label>
                 <input id="whatsapp" type="text" name="whatsapp" onChange={handleChange} value={values.whatsapp} placeholder="Whatsapp"/>
+                <label><b>Portifólio</b></label>
+                <input id="portfolio" type="text" name="portfolio"  onChange={handleChange}  value={values.portfolio}  placeholder="Portifólio"/>
+          
+                <label><b>LinkedIn</b></label>
+                <input id="linkedin" type="text" name="linkedin" onChange={handleChange} value={values.linkedin} placeholder="LinkedIn"/>
+
+                <label><b>Drive</b></label>
+                <input id="drive" type="text" name="drive" onChange={handleChange} value={values.drive} placeholder="Drive"/>
             </div>
           </div>
         </div>
 
-        {<div className="redes-sociais">
-          <label><b>Portifólio</b></label>
-          <input id="portfolio" type="text" name="portfolio"  onChange={handleChange}  value={values.portfolio}  placeholder="Portifólio"/>
+        
           
-          <label><b>LinkedIn</b></label>
-          <input id="linkedin" type="text" name="linkedin" onChange={handleChange} value={values.linkedin} placeholder="LinkedIn"/>
-
-          <label><b>Drive</b></label>
-          <input id="drive" type="text" name="drive" onChange={handleChange} value={values.drive} placeholder="Drive"/>
-        </div>}
+       
 
         <div>
-          <UIButton type="submit" theme="" className="btn-submit" rounded>{'>'}</UIButton>
+          <UIButton type="submit" theme="" className="edit-btn-submit" rounded>{'SALVAR'}</UIButton>
         </div>
       </form>
     </div>
