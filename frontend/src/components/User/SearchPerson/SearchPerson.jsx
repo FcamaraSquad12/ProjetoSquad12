@@ -41,8 +41,8 @@ export default () => {
     return navigate('/search-group');
   }
 
-  const handleFindPerson = () => {
-    return navigate('/search-person')
+  const handleEditProfile = () => {
+    return navigate('/edit-profile');
   }
 
   const renderCards = () => {
@@ -71,7 +71,7 @@ export default () => {
             <ul className="ul-item">
               <li className="selected-page">Encontre uma pessoa</li>
               <li onClick={handleFindGroup}>Grupo de estudos</li>
-              <li>{`Olá, ${activeUser.name}!`}</li>
+              <li onClick={handleEditProfile}>{`Olá, ${activeUser.name}!`}</li>
             </ul>
           </nav>
         </header>

@@ -39,10 +39,6 @@ export default () => {
     return navigate('/search-person')
   }
 
-  const handleFindGroup = () => {
-    return navigate('/search-group');
-  }
-
   const renderCards = () => {
     //if (search) {
       return groups.map((group) => 
