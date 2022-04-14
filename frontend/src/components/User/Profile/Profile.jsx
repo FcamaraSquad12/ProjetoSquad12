@@ -48,9 +48,7 @@ export default ({user}) => {
           <h1>{user.name}</h1>
           <h2>{user.profession}</h2>
           <p>
-            {user.description} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad fugit voluptatibus,
-            cupiditate eos, velit, ipsa neque sit ut nemo aliquid corporis facere sunt molestiae ipsum alias dolorum
-            eveniet. Iure, eveniet?
+            {user.description}
           </p>
           <div className="contato">
             <a className="agendar" href={user.calendly} target="_blank">

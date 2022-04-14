@@ -14,9 +14,14 @@
 
 }
 
+.profile-image-container{
+flex:1;
+}
+
 .profile-infos{
     color: #212529;
     margin: 0 6px 0 16px;
+    flex: 3;
 }
 .profile-infos > h1{
     font-weight: 400;
@@ -129,6 +134,12 @@ div > .item-skill:hover{
 .outdoor-img {
     width:100%;   
 }
+
+/* .skills-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} */
 
 
 
