@@ -56,7 +56,7 @@ export default ({user}) => {
             <a className="agendar" href={user.calendly} target="_blank">
               Agendar um horário
             </a>
-            <a className="whats" href="#" target="_blank">
+            <a className="whats" href={`https://api.whatsapp.com/send?phone=55${user.whatsapp}`} target="_blank">
               <i className="fa-brands fa-whatsapp"></i>WhatsApp
             </a>
           </div>
