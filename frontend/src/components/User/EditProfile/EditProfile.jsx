@@ -86,12 +86,11 @@ export default () => {
           <div className="profile-infos">
             <h1>{activeUser.name}</h1>
             <h2>{activeUser.profession}</h2>
-            <p>
-              <label><b>Descrição</b></label>
-              <input id="description" type="text" name="description" onChange={handleChange} value={values.description} placeholder="Descrição"/>
-
-            </p>
+          
             <div className="contato">
+                <label><b>Descrição</b></label>
+                <input id="description" type="text" name="description" onChange={handleChange} value={values.description} placeholder="Descrição"/>
+
                 <label><b>Calendly</b></label>
                 <input id="calendly" type="text" name="calendly" onChange={handleChange} value={values.calendly} placeholder="Calendly"/>
 
