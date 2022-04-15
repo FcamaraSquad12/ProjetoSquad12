@@ -11,12 +11,22 @@ import StoreContext from 'components/Store/Context';
 
 const baseUrl = 'http://localhost:3001/people';
 
+const initialState = {
+  dev: false,
+  ux: false,
+  ui: false,
+  marketing: false,
+  rh: false,
+  profession: ''
+}
+
 export default () => {  
   const { activeUser } = useContext(StoreContext);
   const [users, setUsers] = useState([]);
   const [searchField, setSearchField] = useState('');     
   const [search, setSearch] = useState([]);
   const navigate = useNavigate();
+  const [values, setValues] = useState(initialState);
 
   useEffect(() => {
       axios(baseUrl).then(resp => {
@@ -25,14 +35,21 @@ export default () => {
   },[])
 
   const handleChange = (e) => {
+      setValues(initialState);
       const { value } = e.target;
       setSearchField(value);
       setSearch(value);
       return renderCards();
   };
 
-  const handleClick = (e) => {
+  const handleChangeProfession = (e) => {
     const { name } = e.target;
+    setValues({...initialState, [name]: true, profession: name.toLowerCase()})
+    return renderCards();
+};
+
+  const handleClick = (e) => {
+    const name = e.target.name;
     setSearch(name.toLowerCase());
     return renderCards();
   };
@@ -52,12 +69,21 @@ export default () => {
       {
         found = false;
 
-        return user.skills.map((skill) => {
-          if (!found && (user.name.toLowerCase().includes(search) || activeUser._id != user._id && skill.toLowerCase().search(search) != -1)){
+        if (values.profession) {
+          if (!found && (user.profession.toLowerCase().search(values.profession) != -1)){
             found = true;
+            console.log(values.profession, user.profession)
             return <Card user={user}/>
           }
-        })          
+        } else {
+          return user.skills.map((skill) => {
+            if (!found && (user.name.toLowerCase().includes(search) || 
+              activeUser._id != user._id && skill.toLowerCase().search(search) != -1)){
+              found = true;
+              return <Card user={user}/>
+            }
+          })
+        }  
       }
     )
   }
@@ -78,8 +104,11 @@ export default () => {
         
         <div className="search-container">
           <div className="search-filter">
-            <TagField tag={"react"} onClick={handleClick}/>
-            <TagField tag={"UX/UI Designers"} onClick={handleClick}/>
+            <TagField name='dev' selected={values.dev} tag={"DEV"} onClick={(e) => handleChangeProfession(e)}/>
+            <TagField name='ux' selected={values.ux} tag={"UX"} onClick={(e) => handleChangeProfession(e)}/>
+            <TagField name='ui' selected={values.ui} tag={"UI"} onClick={(e) => handleChangeProfession(e)}/>
+            <TagField name='marketing' selected={values.marketing} tag={"MARKETING"} onClick={(e) => handleChangeProfession(e)}/>
+            <TagField name='rh' selected={values.rh} tag={"RH"} onClick={(e) => handleChangeProfession(e)}/>
           </div>
           <div className="input-group">
             <div className="i-search">
@@ -90,13 +119,8 @@ export default () => {
           
         </div>
 
-        {/* <div className="search-filter">
-          <TagField tag={"UX / UI"} />
-          <TagField tag={"DEV"} />
-          <TagField tag={"PRODUTO"} />
-        </div> */}
         <div>
-          <h1>Nossos #DEV's</h1>
+          <h1>Nossos #SangueLaranja</h1>
         </div>
         <div className="container-body">
           <div className="cards-container">
