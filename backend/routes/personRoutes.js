@@ -55,6 +55,24 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+router.get('/:email', async (req, res) => {
+  const mail = req.params.email
+
+  try {
+    console.log(mail)
+    const person = await Person.findOne({ email: mail })
+
+    if (!person) {
+      res.status(422).json({ message: 'Usuário não encontrado!' })
+      return
+    }
+
+    res.status(200).set("Access-Control-Allow-Origin", "*").json(person)
+  } catch (error) {
+    res.status(500).json({ erro: error })
+  }
+})
+
 router.patch('/:id', async (req, res) => {
   const id = req.params.id
 
