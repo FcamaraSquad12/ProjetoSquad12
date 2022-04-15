@@ -17,6 +17,7 @@ const baseUrl = "http://localhost:3001";
 export default () => {
   const { activeUser, setActiveUser } = useContext(StoreContext);
   const [values, setValues] = useState(activeUser);
+  const [skillField, setSkillField] = useState(values.skills.join(' '));
   const navigate = useNavigate();
   const handleFindGroup = () => {
     return navigate('/search-group')
@@ -34,8 +35,14 @@ export default () => {
     });
   }
 
+  function handleChangeSkillField(e) {
+    const {value } = e.target;
+
+    setSkillField(value);
+  }
+
   const update = () => {
-    const user = values;
+    const user = {...values, skills: skillField.split(' ')};
     const url = `${baseUrl}/${values._id}`;
 
     axios['patch'](url, user)
@@ -49,8 +56,6 @@ export default () => {
     e.preventDefault();
     update();
   }
-
-  let tmpSkill = '';
 
   return (
     <div className="profile-page-container">
@@ -73,15 +78,6 @@ export default () => {
         <div className="profile-container">
           <div className="profile-image-container">
             <img src={ProfilePic} alt="" />
-            <div className="skills-container">
-              {values.skills.map((skill) => {
-                  if (!tmpSkill)
-                    tmpSkill = `${skill}`
-                  else
-                    tmpSkill = ` ${skill}`
-                })
-              }
-            </div>
           </div>
 
           <div className="profile-infos">
@@ -91,6 +87,9 @@ export default () => {
             <div className="contato">
                 <label><b>Descrição</b></label>
                 <input id="description" type="text" name="description" onChange={handleChange} value={values.description} placeholder="Descrição"/>
+                
+                <label><b>Skills</b></label>
+                <input id="skills" type="text" name="skills" onChange={handleChangeSkillField} value={skillField} placeholder="Skills"/>
 
                 <label><b>Calendly</b></label>
                 <input id="calendly" type="text" name="calendly" onChange={handleChange} value={values.calendly} placeholder="Calendly"/>
