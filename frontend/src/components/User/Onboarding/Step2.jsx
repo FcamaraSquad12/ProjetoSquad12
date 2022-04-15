@@ -7,6 +7,7 @@ import ImgMain from "../../../assets/svg/img-signup.svg";
 import RobsonLogo from "../../../assets/svg/logo.svg";
 import { Link } from "react-router-dom";
 import './Onboarding.css'
+import Alert from '../../Alert/Alert'
 
 const baseUrl = "http://localhost:3001/";
 
@@ -27,14 +28,26 @@ function initialState() {
   };
 }
 
+const initialMsg = {
+  type:'',
+  header: '',
+  msg: '',
+  show: false
+}
+
 export default ({next}) => {
   const [values, setValues] = useState(initialState);
   const { token, setToken, setActiveUser } = useContext(StoreContext);
   const navigate = useNavigate();
+  const [msg, setStatusMsg] = useState(initialMsg);
 
   useEffect(() => {
     setToken("");
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => {setStatusMsg(false)}, 7000);
+  },[msg])
 
   const save = () => {
     const user = {
@@ -77,7 +90,13 @@ export default ({next}) => {
       save(values);
       next();
     } else {
-      console.log('As senhas são diferentes!')
+      const msg = {
+        type:'error',
+        msg: '❌ As senhas estão diferentes!',
+        show: true
+      }
+
+      setStatusMsg(msg)
       return
     }
   }
@@ -92,16 +111,16 @@ export default ({next}) => {
             
               <label className="signup-title">Dados Pessoais</label>
             
-              <label><b>Nome Completo</b></label>
+              <label><b>Nome Completo</b> <span className='asterisco'> *</span></label>
               <input id="name" type="text" required name="name" autoComplete="off" onChange={handleChange} value={values.name} placeholder="Digite seu nome"/>
             
-              <label><b>Endereço de e-mail</b></label>
+              <label><b>Endereço de e-mail</b> <span className='asterisco'> *</span></label>
               <input id="email" type="text" required name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
             
-              <label><b>Senha</b></label>
+              <label><b>Senha</b> <span className='asterisco'> *</span></label>
               <input id="password" type="text" required name="password" autoComplete="off" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
               
-              <label><b>Confirme a senha</b></label>
+              <label><b>Confirme a senha</b> <span className='asterisco'> *</span></label>
               <input id="confirmPassword" type="text" required name="confirmPassword" autoComplete="off" onChange={handleChange} value={values.confirmPassword} placeholder="Confirmar senha"/>
             
               <label><b>Whatsapp</b></label>
@@ -112,7 +131,7 @@ export default ({next}) => {
           <div className="signup-content  signup-form-control">
             <label className="signup-title">Dados Profissionais</label>
 
-            <label><b>Qual o seu cargo?</b></label>
+            <label><b>Qual o seu cargo?</b> <span className='asterisco'> *</span></label>
             <input id="profession" type="text" required name="profession" onChange={handleChange} value={values.profession} placeholder="Dev Trainee Ux/Ui Pleno"/>
             
             <label><b>Quais suas principais skills?</b></label>
@@ -130,10 +149,10 @@ export default ({next}) => {
             <label><b>LinkedIn</b></label>
             <input id="linkedin" type="text" name="linkedin" onChange={handleChange} value={values.linkedin} placeholder="LinkedIn"/>
           </div>
-          
           <div>
             <UIButton type="submit" theme="" className="btn-submit" rounded><i class="fa-solid fa-arrow-right-long"></i></UIButton>
           </div>
+          <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
         </div>
       </form>    
   </div>

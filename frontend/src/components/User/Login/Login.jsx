@@ -111,9 +111,6 @@ const UserLogin = () => {
           <div className='forgot'>
             <a id="forgot" href="./">Esqueci a senha</a>
           </div>
-          {
-          // Msg de usuário ou senha inválida removida
-          }
 
           <UIButton
             type="submit"

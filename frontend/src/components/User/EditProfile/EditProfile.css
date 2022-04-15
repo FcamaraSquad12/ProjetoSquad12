@@ -163,35 +163,6 @@ div > .item-skill:hover{
     margin-left: 50%;
 }
 
-.success{
-    position: fixed;
-    bottom: 7px;
-    left: 65%;
-    width: 310px;
-    padding: 5px 10px;
-    color: #008000;
-    font-weight: bold;
-    background-color: #cbffcb;
-    border-radius: 10px;
-    border: 1px solid #008000;
-    animation: slide-top 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.error{
-    text-align: center;
-    position: fixed;
-    bottom: -50px;
-    left: 55px;
-    width: 310px;
-    color: #ff0000;
-    font-weight: bold;
-    background-color: #ffcbcb;
-    border-radius: 10px;
-    border: 1px solid #ff0000;
-    animation: slide-top 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-
-
 @media screen and (max-width: 1200px ) {
     .redes-sociais img{
         width: 200px;

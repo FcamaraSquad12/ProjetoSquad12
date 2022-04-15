@@ -1,4 +1,5 @@
 import React from "react";
+import './Alert.css';
 
 export default ({type, header, msg, show}) => {
     const isVisible = show ? 'visible' : 'hidden';
