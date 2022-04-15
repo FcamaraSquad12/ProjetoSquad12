@@ -136,6 +136,13 @@ li:hover {
   border-radius: 5px 0 0 5px;
 
 }
+.skill{
+  display: flex;
+  flex-wrap: wrap;
+}
+.button-profile:hover{
+  background-color: #FE662E;
+}
 
 .input-group {
   display: flex;
