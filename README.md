@@ -1,9 +1,4 @@
 # ROBSON - SQUAD 12 :rocket: :rocket:
-
-<h1 align="center">
-    <img alt="My Turn" src="frontend/src/assets/svg/logo.svg"/>
-</h1>
-
 <ol>
     <li><a href="#sobre">Sobre</a></li>
         <li> <a href="#especificacoes">Especificações</a></li>
