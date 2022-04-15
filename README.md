@@ -7,7 +7,6 @@
         <li> <a href="#features">Features</a> </li>
         <li> <a href="#conteudoxterno">Conteúdo externo</a></li>
         <li> <a href="#nossaequipe">Nossa Equipe</a></li>
-    <li><a href="#licenca">Licença</a></li>
 </ol>
 
 <h2 id="sobre">Sobre</h2> 
@@ -123,12 +122,12 @@ senha: 123456
 
 |:woman_cartwheeling:|Nome|*No Programa de Formação eu...*|Contatos|
 |--|--|:--:|--|
-|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/1#issue-1205521846" width="300"><br>*Desenvolvedor WEB*| Miguel Fialho| *"..."* | [Linkedin](https://www.linkedin.com/in/guelfialho/) [Email](fialhomig@gmail.com)
-|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/3#issue-1205522740" width="300"><br>*Desenvolvedor WEB*| Wellington Henrique| *"..."* | [Linkedin](https://www.linkedin.com/in/wellingtonhlc/) [Email]()
-|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/6#issue-1205523741" width="300"><br>*Desenvolvedor WEB*| Edmilson Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/edmilsondmx/) [Email]()
-|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/4#issue-1205522984" width="300"><br>*UX/UI Designer*| Gustavo Kappey| *"..."* | [Linkedin](https://www.linkedin.com/in/gkappey/) [Email]()
-|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/5#issue-1205523335" width="300"><br>*UX/UI Designer*| Gustavo Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/guvboas/) [Email]()
-|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/2#issue-1205522392" width="300"><br>*UX/UI Designer*| Natan Ferreira| *"..."* | [Linkedin](https://www.linkedin.com/in/natan-ferreira/) [Email]()
+|<img src="https://user-images.githubusercontent.com/100007542/163568018-ddfb28a9-8cfe-4eea-b9f1-f1c71dc43fb8.jpg" width="300"><br>*Desenvolvedor WEB*| Miguel Fialho| *"..."* | [Linkedin](https://www.linkedin.com/in/guelfialho/) [Email](fialhomig@gmail.com)
+|<img src="https://user-images.githubusercontent.com/100007542/163568233-25c46283-b574-4492-9b93-f36c0bb776c5.jpg" width="300"><br>*Desenvolvedor WEB*| Wellington Henrique| *"..."* | [Linkedin](https://www.linkedin.com/in/wellingtonhlc/) [Email]()
+|<img src="https://user-images.githubusercontent.com/100007542/163568393-67d6a3bb-20a7-4198-9bbc-9d95dcbf14c5.jpg" width="300"><br>*Desenvolvedor WEB*| Edmilson Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/edmilsondmx/) [Email]()
+|<img src="https://user-images.githubusercontent.com/100007542/163568265-93618c14-73db-401d-8a31-57f83ef3f60d.jpg" width="300"><br>*UX/UI Designer*| Gustavo Kappey| *"..."* | [Linkedin](https://www.linkedin.com/in/gkappey/) [Email]()
+|<img src="https://user-images.githubusercontent.com/100007542/163568327-eed4bd44-1703-45d4-81d0-1838a28a1961.jpg" width="300"><br>*UX/UI Designer*| Gustavo Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/guvboas/) [Email]()
+|<img src="https://user-images.githubusercontent.com/100007542/163568158-8aede2bb-745b-43a6-adab-6a4e9c782080.jpg" width="300"><br>*UX/UI Designer*| Natan Ferreira| *"..."* | [Linkedin](https://www.linkedin.com/in/natan-ferreira/) [Email]()
 
 <hr>
 
