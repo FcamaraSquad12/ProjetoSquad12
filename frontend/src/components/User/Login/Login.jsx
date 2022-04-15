@@ -78,22 +78,24 @@ const UserLogin = () => {
     <div className="container">
       <div className="logo-container scale-up-center">
         <img id="Robson-logo" src= {RobsonLogo} alt="" />
-        <h2>Uma rede de conexão para criar</h2>
-        <h2>vínculos e conquistar objetivos juntos</h2>
-        <img src={ImgMain} alt="" />
+        <h3>Uma rede de conexão para criar</h3>
+        <h3>Vínculos e conquistar objetivos juntos</h3>
+        <img className='img-login' src={ImgMain} alt="" />
       </div>
       <div className="login-content scale-up-center">
         <label className="login-title">Acessar Conta</label>
         <label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida!</label>
 
         <form className='form' autoComplete="" onSubmit={onSubmit}>
-          <div className="form-control">
-            <label htmlFor="email"><b>E-mail</b></label>
+          <div className="form-login">
+            <label htmlFor="email"><b>E-mail <span className='asterisco'> *</span></b></label>
             <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
           </div>
-          <div className="form-control">
-            <label htmlFor="password"><b>Senha</b></label>
+          <div className="form-login">
+            <label htmlFor="password"><b>Senha <span className='asterisco'> *</span></b></label>
             <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
+          </div>
+          <div className='forgot'>
             <a id="forgot" href="./">Esqueci a senha</a>
           </div>
           {
