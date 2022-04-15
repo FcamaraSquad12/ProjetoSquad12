@@ -78,6 +78,7 @@ export default ({next}) => {
       next();
     } else {
       console.log('As senhas são diferentes!')
+      return
     }
   }
  

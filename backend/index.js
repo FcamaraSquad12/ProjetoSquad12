@@ -25,6 +25,9 @@ app.use('/', personRoutes);
 // SELECT PERSON FOR ID
 app.use('/people/:id', personRoutes);
 
+// SELECT PERSON FOR EMAIL
+app.use('/people/:email', personRoutes);
+
 // UPDATE PERSON
 app.use('/people/:id', personRoutes);
 

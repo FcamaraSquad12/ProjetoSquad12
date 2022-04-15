@@ -26,19 +26,13 @@ export default () => {
 
   const handleChange = (e) => {
       const { value } = e.target;
-      setSearchField(value)
-      setSearch(value.toLowerCase())
+      setSearchField(value);
+      setSearch(value.toLowerCase());
       return renderCards()
   };
 
-  const handleClick = (e) => {
-    const { name } = e.target;
-    setSearch(name)
-    return renderCards()
-  };
-
   const handleFindPerson = () => {
-    return navigate('/search-person')
+    return navigate('/search-person');
   }
 
   const handleEditProfile = () => {
@@ -46,15 +40,16 @@ export default () => {
   }
 
   const renderCards = () => {
-    //if (search) {
-      return groups.map((group) => 
-        {
-          if (group.subject.toLowerCase().search(search) != -1){
-            return <Card group={group}/>
-          }         
-        }
-      )
-    //}
+    return groups.map((group) => 
+    {
+      let found = false;
+
+      if (!found && (group.subject.toLowerCase().search(search) != -1 ||
+                     group.title.toLowerCase().search(search) != -1)){
+        found = true;
+        return <Card group={group}/>  
+      }
+    })
   }
 
   const myName = () => {
@@ -78,10 +73,6 @@ export default () => {
         </header>
         
         <div className="search-container">
-          <div className="search-filter">
-            <TagField tag={"DEV's"} onClick={handleClick}/>
-            <TagField tag={"UX/UI"} onClick={handleClick}/>
-          </div>
           <div className="input-group">
             <div className="i-search">
               <i id="icon-search" class="fas fa-search"></i>
@@ -96,7 +87,6 @@ export default () => {
         </div>
         <div className="container-body">
           <div className="cards-container">
-            
             {renderCards()}
           </div>
 
