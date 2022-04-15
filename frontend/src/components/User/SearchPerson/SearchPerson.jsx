@@ -71,8 +71,7 @@ export default () => {
           }
         } else {
           return user.skills.map((skill) => {
-            if (!found && (user.name.toLowerCase().includes(search) || 
-              activeUser._id != user._id && skill.toLowerCase().search(search) != -1)){
+            if (!found && activeUser._id != user._id && (user.name.toLowerCase().includes(search) || skill.toLowerCase().search(search) != -1)){
               found = true;
               return <Card user={user}/>
             }

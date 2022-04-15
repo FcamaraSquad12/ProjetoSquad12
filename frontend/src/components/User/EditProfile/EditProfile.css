@@ -42,11 +42,17 @@ flex:1;
     width: 90%;
     margin-top: 30px;
 }
-.contato> input{
+.contato > input{
     border-radius: 10px;
     border: 1px solid #CED4DA;
     padding-left: 10px;
     height: 38px;
+    color: #ADB5BD;
+}
+.contato > textarea{
+    border-radius: 10px;
+    border: 1px solid #CED4DA;
+    padding-left: 10px;
     color: #ADB5BD;
 }
 .agendar{
@@ -206,8 +212,16 @@ div > .item-skill:hover{
     .profile-infos{
         width: 90%;
         text-align: center;
+        margin: auto;
+    }
+    .contato{
+        margin: auto;
     }
     .contato > input{
+        width: 100%;
+  
+    }
+    .contato > textarea{
         width: 100%;
     }
 }

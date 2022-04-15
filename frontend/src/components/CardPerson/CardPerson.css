@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   padding: 5px;
   border: 2px solid rgb(0,0,0,0.2);
   border-top: none;
@@ -74,8 +75,8 @@
   background-color: #474747;
   color:#FFFFFF;
   padding: 5px 9px;
-  width: 89px;
-  height: 34px;
+  width: 60%;
+  height: 38px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -87,11 +88,6 @@
 .card-subtile {
   margin-bottom: 5px;
 }
-
-
-
-
-
 
 .fade-in-fwd {
 	-webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
@@ -171,7 +167,8 @@
       width: 302px;
     }
     .cards-container{
-      margin: auto;
+      margin:0 auto;
+      margin-top: 20px;
     }
     div > h1{
       text-align: center;

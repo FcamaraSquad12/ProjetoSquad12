@@ -124,6 +124,9 @@
   #Robson-logo{
     width: 200px;
   }
+  .login-content{
+    max-width: 350px;
+  }
 }
 
  .scale-up-center{

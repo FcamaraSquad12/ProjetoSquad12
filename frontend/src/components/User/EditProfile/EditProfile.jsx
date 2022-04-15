@@ -86,7 +86,7 @@ export default () => {
           
             <div className="contato">
                 <label><b>Descrição</b></label>
-                <input id="description" type="text" name="description" onChange={handleChange} value={values.description} placeholder="Descrição"/>
+                <textarea id="description" multiline rows ="5" cols="20" type="text" name="description" onChange={handleChange} value={values.description} placeholder="Descrição"/>
                 
                 <label><b>Skills</b></label>
                 <input id="skills" type="text" name="skills" onChange={handleChangeSkillField} value={skillField} placeholder="Skills"/>
