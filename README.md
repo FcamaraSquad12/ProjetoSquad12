@@ -105,10 +105,23 @@ senha: 123456
 * Tela de perfil para editar os dados do usuário com comunicação com o banco de dados na nuvem;
 * Tela de ambientes de estudos coletivos (Crowndlearning) - No momento as salas são no discord, imaginamos o desenvolvimento da funcionalidade dentro da própria plataforma no futuro.
 
+<h2 id="features">Features</h2>
+
+* O que será que pensamos para o futuro da nossa aplicação...? :sunglasses:
+    * **01** - Criação de salas de crowndlearning(aprendizado coletivo) nativo da plataforma.
+    * **02** - Criação de sistema de agendamento de mentoria nativo da plataforma.
+    * **03** - 
+
+<h2 id="conteudoxterno">Conteúdo Externo</h2> 
+
+* Pitch
+* Video de funcionalidades
+* Artigo
+
 <h2 id="nossaequipe">Nossa Equipe</h2> 
 
 
-|:rocket: :rocket:|Nome|*No Programa de Formação eu...*|Contatos|
+|:woman_cartwheeling:|Nome|*No Programa de Formação eu...*|Contatos|
 |--|--|:--:|--|
 |<img src="" width="300"><br>*Desenvolvedor WEB*| Miguel Fialho| *"..."* | [Linkedin](https://www.linkedin.com/in/guelfialho/) [Email](fialhomig@gmail.com)
 |<img src="" width="300"><br>*Desenvolvedor WEB*| Wellington Henrique| *"..."* | [Linkedin](https://www.linkedin.com/in/wellingtonhlc/) [Email]()
@@ -117,3 +130,6 @@ senha: 123456
 |<img src="" width="300"><br>*UX/UI Designer*| Gustavo Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/guvboas/) [Email]()
 |<img src="" width="300"><br>*UX/UI Designer*| Natan Ferreira| *"..."* | [Linkedin](https://www.linkedin.com/in/natan-ferreira/) [Email]()
 
+<hr>
+
+<p> Projeto do grande Squad-12!<br> <p>
