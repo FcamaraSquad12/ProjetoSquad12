@@ -12,7 +12,7 @@
 
 <h2 id="sobre">Sobre</h2> 
 
-A ROBSON - <b>R</b>ede <b>O</b>timizada de <b>B</b>usca e <b>S</b>olução "<b>O</b>range <b>N</b>etworking" - foi um projeto desenvolvido pelo Squad 12 para o Hackathon do Programa de Formação da [FCamara](https://digital.fcamara.com.br/programadeformacao) season 3. O objetivo desse projeto foi a construção de uma uma plataforma onde você encontra pessoas da tecnologia com conhecimentos diversos para tirar suas dúvidas sobre a área ou te orientar no aprendizado de novas habilidades. Na <b>ROBSON</b>, pessoas com diferentes níveis de experiência poderão se encontrar para trocar experiências, sanar dúvidas e criar networking, sempre priorizando o aprendizado. Sem mais dor de cabeça para encontrar ajuda, com o registro das habilidades dos colaboradores de forma fácil, intuitiva e veloz junto com nosso sistema de filtragem por skills os #SangueLaranja terão na plataforma da ROBSON a solução ideal para conexão das pessoas com foco no aprendizado.
+A ROBSON - <b>R</b>ede <b>O</b>timizada de <b>B</b>usca e <b>S</b>olução "<b>O</b>range <b>N</b>etworking" - foi um projeto desenvolvido pelo Squad 12 para o Hackathon do Programa de Formação da [FCamara](https://digital.fcamara.com.br/programadeformacao) season 3. O objetivo desse projeto foi a construção de uma uma plataforma onde você encontra pessoas da tecnologia com conhecimentos diversos para tirar suas dúvidas sobre a área ou te orientar no aprendizado de novas habilidades. Na <b>ROBSON</b>, pessoas com diferentes níveis de experiência poderão se encontrar para trocar experiências, sanar dúvidas e criar networking, sempre priorizando o aprendizado. Sem mais dor de cabeça para encontrar ajuda, com o registro das habilidades dos colaboradores de forma fácil, intuitiva e veloz junto com nosso sistema de filtragem por skills os #SangueLaranja terão na plataforma da <b>ROBSON</b> a solução ideal para conexão das pessoas com foco no aprendizado.
 
 <h2 id="especificacoes">Especificações</h2> 
 
@@ -104,3 +104,16 @@ senha: 123456
 * Tela de visualizar o perfil de outro #SangueLaranja com as opções de contato, agendamento de mentoria (plataforma Calendly), LinkedIn, Portifólio. <b>VAMO CONECTAR!</b>
 * Tela de perfil para editar os dados do usuário com comunicação com o banco de dados na nuvem;
 * Tela de ambientes de estudos coletivos (Crowndlearning) - No momento as salas são no discord, imaginamos o desenvolvimento da funcionalidade dentro da própria plataforma no futuro.
+
+<h2 id="nossaequipe">Nossa Equipe</h2> 
+
+
+|:rocket: :rocket:|Nome|*No Programa de Formação eu...*|Contatos|
+|--|--|:--:|--|
+|<img src="" width="300"><br>*Desenvolvedor WEB*| Miguel Fialho| *"..."* | [Linkedin](https://www.linkedin.com/in/guelfialho/) [Email](fialhomig@gmail.com)
+|<img src="" width="300"><br>*Desenvolvedor WEB*| Wellington Henrique| *"..."* | [Linkedin](https://www.linkedin.com/in/wellingtonhlc/) [Email]()
+|<img src="" width="300"><br>*Desenvolvedor WEB*| Edmilson Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/edmilsondmx/) [Email]()
+|<img src="" width="300"><br>*UX/UI Designer*| Gustavo Kappey| *"..."* | [Linkedin](https://www.linkedin.com/in/gkappey/) [Email]()
+|<img src="" width="300"><br>*UX/UI Designer*| Gustavo Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/guvboas/) [Email]()
+|<img src="" width="300"><br>*UX/UI Designer*| Natan Ferreira| *"..."* | [Linkedin](https://www.linkedin.com/in/natan-ferreira/) [Email]()
+
