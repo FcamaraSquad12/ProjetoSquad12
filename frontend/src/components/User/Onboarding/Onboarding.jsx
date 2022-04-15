@@ -69,7 +69,7 @@ export default class App extends Component {
 
             <div id="test-l-3" className="content">
               <Step3/>
-              <button className="btn-1"><Link id="onboarding" to="/login">Entrar</Link></button>
+              <button className="btn-1"><Link id="onboarding" to="/login">Acessar Home Page</Link></button>
             </div>
           </div>
         </div>

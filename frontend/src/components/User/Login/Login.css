@@ -46,6 +46,9 @@
 .form > p{
   text-align: center;
 }
+.form > p > a{
+  color: var(--orange-color);
+}
 
 .form-login{
   display: flex;
