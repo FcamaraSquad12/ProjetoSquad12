@@ -54,11 +54,11 @@ export default ({next}) => {
     const url = user.id ? `${baseUrl}/${user.id}` : baseUrl;
 
     axios[method](url, user)
-      .then(resp => {
-          setToken(user._id);
-          setActiveUser(user);
-        }
-      )
+    .then(resp => {
+        setToken(user._id);
+        setActiveUser(user);
+      }
+    )
   } 
 
   function handleChange(e) {
@@ -72,8 +72,13 @@ export default ({next}) => {
 
   function onSubmit(e) {
     e.preventDefault();
-    save(values);
-    next();
+
+    if (values.password === values.confirmPassword) {
+      save(values);
+      next();
+    } else {
+      console.log('As senhas são diferentes!')
+    }
   }
  
   return (
@@ -87,15 +92,16 @@ export default ({next}) => {
               <label className="signup-title">Dados Pessoais</label>
             
               <label><b>Nome Completo</b></label>
-              <input id="name" type="text" name="name" autoComplete="off" onChange={handleChange} value={values.name} placeholder="Digite seu nome"/>
+              <input id="name" type="text" required name="name" autoComplete="off" onChange={handleChange} value={values.name} placeholder="Digite seu nome"/>
             
               <label><b>Endereço de e-mail</b></label>
-              <input id="email" type="text" name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
+              <input id="email" type="text" required name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
             
               <label><b>Senha</b></label>
-              <input id="password" type="text" name="password" autoComplete="off" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
+              <input id="password" type="text" required name="password" autoComplete="off" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
+              
               <label><b>Confirme a senha</b></label>
-              <input id="confirmPassword" type="text" name="confirmPassword" autoComplete="off" onChange={handleChange} value={values.confirmPassword} placeholder="Confirmar senha"/>
+              <input id="confirmPassword" type="text" required name="confirmPassword" autoComplete="off" onChange={handleChange} value={values.confirmPassword} placeholder="Confirmar senha"/>
             
               <label><b>Whatsapp</b></label>
               <input id="whatsapp" type="text" name="whatsapp" autoComplete="off" onChange={handleChange} value={values.whatsapp} placeholder="[xx] xxxxx-xxxx"/>
@@ -106,7 +112,7 @@ export default ({next}) => {
             <label className="signup-title">Dados Profissionais</label>
 
             <label><b>Qual o seu cargo?</b></label>
-            <input id="profession" type="text" name="profession" onChange={handleChange} value={values.profession} placeholder="Dev Trainee Ux/Ui Pleno"/>
+            <input id="profession" type="text" required name="profession" onChange={handleChange} value={values.profession} placeholder="Dev Trainee Ux/Ui Pleno"/>
             
             <label><b>Quais suas principais skills?</b></label>
             <input id="skillField" type="text" name="skillField" onChange={handleChange} value={values.skillField} placeholder="Skills"/>
