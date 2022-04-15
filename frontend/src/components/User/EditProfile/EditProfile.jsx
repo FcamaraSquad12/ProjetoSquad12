@@ -10,8 +10,8 @@ import { useNavigate } from 'react-router-dom';
 import StoreContext from 'components/Store/Context';
 import UIButton from "components/UI/Button/Button";
 import axios from "axios";
-import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png';
 import Alert from '../../Alert/Alert'
+import Footer from '../../Footer/Footer';
 import { set } from 'js-cookie';
 
 const initialMsg = {
@@ -137,16 +137,7 @@ export default () => {
         </div>
       </form>
       <Alert type={msg.type} msg={msg.msg} show={msg.show}/>
-      <div className="footer-container">
-        <footer>
-          <div className="footer-robson-logo">
-            <img src={RobsonLogo} alt="" />
-          </div>
-          <div className="footer-fcamara-logo">
-            <img src={FcamaraLogo} alt="" />
-          </div>
-        </footer>
-      </div>
+      <Footer/>
     </div>
   );
 };

@@ -4,8 +4,8 @@ import RobsonLogo from '../../../assets/svg/logo.svg';
 import ProfilePic from '../../../assets/svg/image2.svg';
 import Outdoor from '../../../assets/svg/profilePic.svg';
 import { useNavigate } from 'react-router-dom';
-import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
 import CardPortfolio from '../../CardPortfolio/CardPortfolio';
+import Footer from '../../Footer/Footer';
 
 export default ({user}) => {
   const navigate = useNavigate();
@@ -65,17 +65,7 @@ export default ({user}) => {
         {user.linkedin ? <CardPortfolio link={user.linkedin}/>:''}
         {user.drive ? <CardPortfolio link={user.drive}/>:''}
       </div>
-      
-      <div className="footer-container">
-        <footer>
-          <div className="footer-robson-logo">
-            <img src={RobsonLogo} alt="" />
-          </div>
-          <div className="footer-fcamara-logo">
-            <img src={FcamaraLogo} alt="" />
-          </div>
-        </footer>
-      </div>
+      <Footer/>
     </div>
   );
 };

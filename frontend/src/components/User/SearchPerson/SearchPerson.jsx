@@ -5,9 +5,9 @@ import axios from 'axios'
 import "./SearchPerson.css";
 import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
-import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
 import { useNavigate } from 'react-router-dom'
 import StoreContext from 'components/Store/Context';
+import Footer from '../../Footer/Footer';
 
 const baseUrl = 'http://localhost:3001/people';
 
@@ -125,17 +125,7 @@ export default () => {
           <div className="cards-container">
             {renderCards()}
           </div>
-
-          <div className="footer-container">
-            <footer>
-              <div className="footer-robson-logo">
-                <img src={RobsonLogo} alt="" />
-              </div>
-              <div className="footer-fcamara-logo">
-                <img src={FcamaraLogo} alt="" />
-              </div>
-            </footer>
-          </div>
+          <Footer/>
         </div>
       </div>
     </div>
