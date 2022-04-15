@@ -1,0 +1,161 @@
+#root {
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 900px; 
+  margin: 0 auto;
+}
+/* .logo-container {
+ 
+} */
+
+#Robson-logo {
+  width: 300px;
+  height: 64px;
+}
+
+
+.logo-container img {
+  width: 100%;
+}
+
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  margin: 0 auto;
+  line-height: 40px;
+  background-color: white;
+  border-radius: 20px;
+  border-color: black;
+  border-width: 1px;
+  border-style: inset;
+}
+
+.form{
+  margin-top:0 20px;
+  width: 80%;
+}
+.form > p{
+  text-align: center;
+}
+.form > p > a{
+  color: var(--orange-color);
+}
+
+.form-login{
+  display: flex;
+  flex-direction: column;
+}
+.form-login > input{
+  border-radius: 10px;
+  border: 1px solid #CED4DA;
+  height: 48px;
+  background-color: #FFFFFF;
+  padding: 0 10px;
+}
+.btn-login {
+  height: var(--default-components-height);
+  border-radius: 4.8px;
+  background-color: var(--orange-color);
+  border: none;
+  display: block;
+  width: 100%;
+  color: white;
+}
+
+.asterisco{
+  color: var(--orange-color);
+}
+
+.login-title {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 32px;
+  margin-top: 60px;
+  font-weight: bold;
+}
+
+#forgot, .forgot {
+  width: 100%;
+  text-align:right;
+  color: var(--orange-color);
+  box-shadow: none;
+}
+#onboarding{
+  box-shadow: none;
+}
+#sing-up {
+  color: var(--orange-color);
+}
+#Sign-up{
+  color: var(--orange-color);
+}
+
+@media screen and (max-width: 1020px) {
+  .logo-container img{
+    width: 400px;
+  }
+  .logo-container h3{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 993px) {
+  .img-login{
+    display: none;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .logo-container{
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .logo-container h3{
+    font-size: 20px;
+  }
+  #Robson-logo{
+    width: 200px;
+  }
+  .login-content{
+    max-width: 350px;
+  }
+}
+
+ .scale-up-center{
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+

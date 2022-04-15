@@ -1,0 +1,163 @@
+.bs-stepper-header{
+    width: 80%;
+    margin: auto;
+}
+
+.bs-stepper-circle{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #FE662E;
+    color: black;
+}
+
+.active .bs-stepper-circle{
+    background-color: #FE662E;
+    color: white;
+    border: 1px solid black;
+    font-size: 1.3em;
+
+}
+
+.bs-stepper .line{
+    height: 8px;
+    background-color: #FE662E;
+}
+.bs-stepper .step-trigger{
+    padding: 0;
+}
+
+.bs-stepper-content{
+    width: 80%;
+    margin: auto;
+}
+.content{
+    text-align: center;
+}
+
+.card-body{
+    border: none!important;
+    align-items: center;
+}
+
+.btn-1{
+    width: 370px;
+    height: 40px;
+    margin: auto;
+    background-color: #FE662E;
+    color: white;
+    border: 1px solid black;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.521);
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.btn-1 >a{
+    text-decoration: none;
+    color: white;
+    box-shadow: none;
+}
+
+.text-card{
+    width: 90%;
+    text-align: center;
+}
+
+.text-card > h2 > span{
+    font-weight: 500;
+    color: #FE662E;
+}
+.text-card > p{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+}
+.text-card > p > span{
+    font-weight: 400;
+    font-weight: bold;
+}
+.text-card > ul{
+    list-style-position: inside;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: start;
+    margin: auto;
+}
+
+.list-form{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.robson-logo{
+    margin-bottom: 10px;
+}
+
+.signup-content{
+    padding-bottom: 20px;
+    align-items: flex-start;
+    padding-left: 30px;
+}
+.d-pessoais{
+    padding-bottom: 30px;
+
+}
+
+.list-form input{
+    width: 90%;
+    border-radius: 10px;
+    border: 1px solid #CED4DA;
+    padding: 0 10px;
+}
+#card-img{
+    align-items: center;
+    text-align: center;
+}
+
+.error{
+    position: fixed;
+    left: 70%;
+}
+@media screen and (max-width: 1038px) {
+    .bs-stepper-content{
+        width: 100%;
+    }
+    .bs-stepper-header{
+        width: 100%; 
+     }
+     .list-form{
+        flex-direction: column;
+    }
+    .signup-form-control{
+        margin-top: 20px;
+    }
+    .error{
+        position: fixed;
+        left: 60%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .bs-stepper{
+        margin: auto;
+    }
+    .bs-stepper-header{
+       width: 100%; 
+       margin: auto;
+    }
+    .signup-container{
+        width: 400px;
+    }
+    .list-form{
+        width: 100%;
+        flex-direction: column;
+        margin: auto;
+    }
+    .error{
+        position: fixed;
+        right: 100%;
+    }
+}
