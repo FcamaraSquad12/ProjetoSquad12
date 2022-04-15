@@ -151,9 +151,7 @@ export default ({next}) => {
             <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
           </div>
           <div>
-            
             <UIButton type="submit" theme="" className="btn-submit" rounded><i class="fa-solid fa-arrow-right-long"></i></UIButton>
-            
           </div>
         </div>
       </form>    
