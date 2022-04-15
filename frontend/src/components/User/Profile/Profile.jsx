@@ -3,11 +3,9 @@ import './Profile.css';
 import RobsonLogo from '../../../assets/svg/logo.svg';
 import ProfilePic from '../../../assets/svg/image2.svg';
 import Outdoor from '../../../assets/svg/profilePic.svg';
-import Medium from '../../../assets/svg/mediumPic.svg';
-import Linkedin from '../../../assets/svg/linkedin.svg';
-import Drive from '../../../assets/svg/drivePic.svg';
 import { useNavigate } from 'react-router-dom';
 import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
+import CardPortfolio from '../../CardPortfolio/CardPortfolio';
 
 export default ({user}) => {
   const navigate = useNavigate();
@@ -62,29 +60,12 @@ export default ({user}) => {
         </div>
       </div>
 
-      {<div className="redes-sociais">
-        
-        <a src={user.portfolio} href={user.portfolio} target="_blank">
-          <img src={Medium} alt="" />
-          <h2>Acesse meus artigos</h2>
-          <p>Medium</p>
-        </a>
-        
-
-        <a href={user.linkedin} target="_blank">
-          <img src={Linkedin} alt="" />
-          <h2>Acesse meu Linkedin</h2>
-          <p>Linkedin</p>
-        </a>
-
-
-        <a href={user.drive} target="_blank">
-          <img src={Drive} alt="" />
-          <h2>Acesse meu Drive</h2>
-          <p>Google Drive</p>
-        </a>
-
-      </div>}
+      <div className="redes-sociais">
+        {user.portfolio ? <CardPortfolio link={user.portfolio}/>:''}
+        {user.linkedin ? <CardPortfolio link={user.linkedin}/>:''}
+        {user.drive ? <CardPortfolio link={user.drive}/>:''}
+      </div>
+      
       <div className="footer-container">
         <footer>
           <div className="footer-robson-logo">
