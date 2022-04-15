@@ -122,6 +122,9 @@
      .list-form{
         flex-direction: column;
     }
+    .signup-form-control{
+        margin-top: 20px;
+    }
 }
 
 @media screen and (max-width: 770px) {
