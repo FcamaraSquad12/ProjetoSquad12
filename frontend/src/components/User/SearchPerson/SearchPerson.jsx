@@ -82,6 +82,12 @@ export default () => {
     )
   }
 
+  const myName = () => {
+    const myName = activeUser.name.split(' ');
+    const firstLetter = myName[0][0].toUpperCase();
+    return `${firstLetter}${myName[0].substring(1, myName[0].length)}`
+  }
+
   return (
     <div className="app">
       <div className="home-container">
@@ -91,7 +97,7 @@ export default () => {
             <ul className="ul-item">
               <li className="selected-page">Encontre uma pessoa</li>
               <li onClick={handleFindGroup}>Grupo de estudos</li>
-              <li onClick={handleEditProfile}>{`Olá, ${activeUser.name}!`}</li>
+              <li onClick={handleEditProfile}>{`Olá, ${myName()}!`}</li>
             </ul>
           </nav>
         </header>

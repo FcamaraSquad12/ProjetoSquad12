@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Card from "../../CardGroup/CardGroup"
 import TagField from "../../TagField/TagField"
 import axios from 'axios'
@@ -7,10 +7,12 @@ import { set } from "js-cookie";
 import RobsonLogo from '../../../assets/svg/logo.svg'
 import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
 import { useNavigate } from 'react-router-dom'
+import StoreContext from 'components/Store/Context';
 
 const baseUrl = 'http://localhost:3001'
 
 export default () => {  
+  const { activeUser } = useContext(StoreContext);
   const [groups, setGroups] = useState([]);
   const [searchField, setSearchField] = useState('');     
   const [search, setSearch] = useState([]);
@@ -39,6 +41,10 @@ export default () => {
     return navigate('/search-person')
   }
 
+  const handleEditProfile = () => {
+    return navigate('/edit-profile');
+  }
+
   const renderCards = () => {
     //if (search) {
       return groups.map((group) => 
@@ -51,6 +57,12 @@ export default () => {
     //}
   }
 
+  const myName = () => {
+    const myName = activeUser.name.split(' ');
+    const firstLetter = myName[0][0].toUpperCase();
+    return `${firstLetter}${myName[0].substring(1, myName[0].length)}`
+  }
+
   return (
     <div className="app">
       <div className="home-container">
@@ -60,6 +72,7 @@ export default () => {
             <ul className="ul-item">
               <li onClick={handleFindPerson}>Encontre uma pessoa</li>
               <li className="selected-page">Grupo de estudos</li>
+              <li onClick={handleEditProfile}>{`Olá, ${myName()}!`}</li>
             </ul>
           </nav>
         </header>
@@ -78,11 +91,6 @@ export default () => {
           
         </div>
 
-        {/* <div className="search-filter">
-          <TagField tag={"UX / UI"} />
-          <TagField tag={"DEV"} />
-          <TagField tag={"PRODUTO"} />
-        </div> */}
         <div>
           <h1>Grupos de estudo online</h1>
         </div>
