@@ -133,8 +133,9 @@ const UserLogin = () => {
             Entrar
           </UIButton>
           <p  >Não é cadastrado? <Link id="onboarding" to="/onboarding">Cadastre-se</Link></p>
+          <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
         </form>
-        <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
+        
       </div>
     </div>
   );

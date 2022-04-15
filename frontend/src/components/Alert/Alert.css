@@ -7,6 +7,7 @@
     color: #008000;
     font-weight: bold;
     background-color: #cbffcb;
+    backdrop-filter: blur(5px);
     border-radius: 10px;
     border: 1px solid #008000;
     animation: slide-top 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -14,14 +15,25 @@
 
 .error{
     text-align: center;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0px;
-    left: 55px;
-    width: 310px;
+    left: 0!important;
+    width: 400px;
     color: #ff0000;
     font-weight: bold;
-    background-color: #ffcbcb;
+    background-color: #ffcbcb57;
     border-radius: 10px;
     border: 1px solid #ff0000;
+    backdrop-filter: blur(5px);
     animation: slide-top 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@media screen and (max-width: 450px) {
+    .error{
+        width: 350px;
+
+    }
+    .success{
+        left: 15%!important;  
+    }
 }

@@ -148,11 +148,13 @@ export default ({next}) => {
 
             <label><b>LinkedIn</b></label>
             <input id="linkedin" type="text" name="linkedin" onChange={handleChange} value={values.linkedin} placeholder="LinkedIn"/>
+            <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
           </div>
           <div>
+            
             <UIButton type="submit" theme="" className="btn-submit" rounded><i class="fa-solid fa-arrow-right-long"></i></UIButton>
+            
           </div>
-          <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
         </div>
       </form>    
   </div>
