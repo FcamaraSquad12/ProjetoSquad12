@@ -43,18 +43,21 @@
     width: 90%;
     margin-top: 30px;
 }
+.contato > input::placeholder{
+    color: #b8b4b4; 
+}
 .contato > input{
     border-radius: 10px;
     border: 1px solid #CED4DA;
     padding-left: 10px;
     height: 38px;
-    color: #ADB5BD;
+    color: #000000;
 }
 .contato > textarea{
     border-radius: 10px;
     border: 1px solid #CED4DA;
     padding-left: 10px;
-    color: #ADB5BD;
+    color: #000000;
 }
 .agendar{
     width: 184px;
