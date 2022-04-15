@@ -52,6 +52,7 @@
 .btn-1 >a{
     text-decoration: none;
     color: white;
+    box-shadow: none;
 }
 
 .text-card{
