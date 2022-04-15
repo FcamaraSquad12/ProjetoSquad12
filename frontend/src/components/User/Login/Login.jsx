@@ -58,8 +58,7 @@ const UserLogin = () => {
     } else {
       const msg = {
         type:'error',
-        header: 'Não foi possível concluir',
-        msg: 'Usuário ou senha inválida',
+        msg: '❌ Usuário ou senha inválida',
         show: true
       }
 

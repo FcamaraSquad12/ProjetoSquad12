@@ -67,8 +67,7 @@ export default () => {
           
           const msg = {
             type:'success',
-            header: 'Salvo com sucesso',
-            msg: 'Suas informações já estão salvas',
+            msg: '✔️Suas informações já estão salvas!',
             show: true
           }
     
@@ -78,7 +77,6 @@ export default () => {
   }
 
   function onSubmit(e) {
-    alert('tudo ok!!')
     e.preventDefault();
     update();
   }
@@ -138,7 +136,7 @@ export default () => {
           <UIButton type="submit" theme="" className="edit-btn-submit" rounded>{'SALVAR'}</UIButton>
         </div>
       </form>
-      <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
+      <Alert type={msg.type} msg={msg.msg} show={msg.show}/>
       <div className="footer-container">
         <footer>
           <div className="footer-robson-logo">
