@@ -50,7 +50,7 @@ export default ({user}) => {
             {user.description}
           </p>
           <div className="contato">
-            <a className="agendar" href={user.calendly} target="_blank">
+            <a className="agendar" href={ user.calendly ? user.calendly : '/search-person'} target="_blank">
               Agendar um horário
             </a>
             <a className="whats" href={`https://api.whatsapp.com/send?phone=55${user.whatsapp}`} target="_blank">
