@@ -123,12 +123,12 @@ senha: 123456
 
 |:woman_cartwheeling:|Nome|*No Programa de Formação eu...*|Contatos|
 |--|--|:--:|--|
-|<img src="" width="300"><br>*Desenvolvedor WEB*| Miguel Fialho| *"..."* | [Linkedin](https://www.linkedin.com/in/guelfialho/) [Email](fialhomig@gmail.com)
-|<img src="" width="300"><br>*Desenvolvedor WEB*| Wellington Henrique| *"..."* | [Linkedin](https://www.linkedin.com/in/wellingtonhlc/) [Email]()
-|<img src="" width="300"><br>*Desenvolvedor WEB*| Edmilson Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/edmilsondmx/) [Email]()
-|<img src="" width="300"><br>*UX/UI Designer*| Gustavo Kappey| *"..."* | [Linkedin](https://www.linkedin.com/in/gkappey/) [Email]()
-|<img src="" width="300"><br>*UX/UI Designer*| Gustavo Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/guvboas/) [Email]()
-|<img src="" width="300"><br>*UX/UI Designer*| Natan Ferreira| *"..."* | [Linkedin](https://www.linkedin.com/in/natan-ferreira/) [Email]()
+|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/1#issue-1205521846" width="300"><br>*Desenvolvedor WEB*| Miguel Fialho| *"..."* | [Linkedin](https://www.linkedin.com/in/guelfialho/) [Email](fialhomig@gmail.com)
+|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/3#issue-1205522740" width="300"><br>*Desenvolvedor WEB*| Wellington Henrique| *"..."* | [Linkedin](https://www.linkedin.com/in/wellingtonhlc/) [Email]()
+|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/6#issue-1205523741" width="300"><br>*Desenvolvedor WEB*| Edmilson Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/edmilsondmx/) [Email]()
+|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/4#issue-1205522984" width="300"><br>*UX/UI Designer*| Gustavo Kappey| *"..."* | [Linkedin](https://www.linkedin.com/in/gkappey/) [Email]()
+|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/5#issue-1205523335" width="300"><br>*UX/UI Designer*| Gustavo Gomes| *"..."* | [Linkedin](https://www.linkedin.com/in/guvboas/) [Email]()
+|<img src="https://github.com/FcamaraSquad12/ProjetoSquad12/issues/2#issue-1205522392" width="300"><br>*UX/UI Designer*| Natan Ferreira| *"..."* | [Linkedin](https://www.linkedin.com/in/natan-ferreira/) [Email]()
 
 <hr>
 
