@@ -19,9 +19,7 @@ export default ({ user }) => {
           <h4 className="card-subtile mb-2 text-muted">{user.profession}</h4>
           <div>
             <p className="skill">
-              {user.skills.map((skill) => (
-                <span className="item-skill">{skill} </span>
-              ))}
+              {user.skills.map((skill) => skill ? <span className="item-skill">{skill}</span> : '')}
             </p>
           </div>
         </div>

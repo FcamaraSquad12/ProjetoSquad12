@@ -41,9 +41,7 @@ export default ({user}) => {
         <div className="profile-image-container">
           <img src={ProfilePic} alt="" />
           <div className="skills-container">
-            {user.skills.map((skill) => (
-              <span className="item-skill">{skill} </span>
-            ))}
+            {user.skills.map((skill) => skill ? <span className="item-skill">{skill}</span> : '')}
           </div>
         </div>
 
