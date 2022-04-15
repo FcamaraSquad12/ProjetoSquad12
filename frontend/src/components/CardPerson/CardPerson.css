@@ -52,7 +52,8 @@
   border-radius: 5px;
   padding: 0 2px;
   color: #FE4400;
-  border: 2px solid #FE4400
+  border: 2px solid #FE4400;
+  margin-bottom: 5px;
 }
 .icon-item{
   display: flex;
