@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import './EditProfile.css';
 import RobsonLogo from '../../../assets/svg/logo.svg';
 import ProfilePic from '../../../assets/svg/image2.svg';
@@ -11,6 +11,15 @@ import StoreContext from 'components/Store/Context';
 import UIButton from "components/UI/Button/Button";
 import axios from "axios";
 import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png';
+import Alert from '../../Alert/Alert'
+import { set } from 'js-cookie';
+
+const initialMsg = {
+  type:'',
+  header: '',
+  msg: '',
+  show: false
+}
 
 const baseUrl = "http://localhost:3001";
 
@@ -18,10 +27,17 @@ export default () => {
   const { activeUser, setActiveUser } = useContext(StoreContext);
   const [values, setValues] = useState(activeUser);
   const [skillField, setSkillField] = useState(values.skills.join(' '));
-  const navigate = useNavigate();
+  const navigate = useNavigate();  
+  const [msg, setStatusMsg] = useState(initialMsg);
+
+  useEffect(() => {
+    setTimeout(() => {setStatusMsg(false)}, 7000);
+  },[msg])
+
   const handleFindGroup = () => {
     return navigate('/search-group')
   }
+
   const handleFindPerson = () => {
     return navigate('/search-person')
   }
@@ -48,6 +64,15 @@ export default () => {
     axios['patch'](url, user)
       .then(resp => {
           setActiveUser(user);
+          
+          const msg = {
+            type:'success',
+            header: 'Salvo com sucesso',
+            msg: 'Suas informações já estão salvas',
+            show: true
+          }
+    
+          setStatusMsg(msg);
         }
       )
   }
@@ -112,6 +137,7 @@ export default () => {
           <UIButton type="submit" theme="" className="edit-btn-submit" rounded>{'SALVAR'}</UIButton>
         </div>
       </form>
+      <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
       <div className="footer-container">
         <footer>
           <div className="footer-robson-logo">

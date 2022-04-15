@@ -6,7 +6,7 @@ import UIButton from 'components/UI/Button/Button';
 import ImgMain from '../../../assets/svg/img-login.svg'
 import RobsonLogo from '../../../assets/svg/logo.svg'
 import { Link } from 'react-router-dom';
-
+import Alert from '../../Alert/Alert'
 import './Login.css';
 
 const baseUrl = 'http://localhost:3001/people';
@@ -15,21 +15,32 @@ function initialState() {
   return {email: '', password: ''};
 }
 
+const initialMsg = {
+  type:'',
+  header: '',
+  msg: '',
+  show: false
+}
+
 const UserLogin = () => {
   const [values, setValues] = useState(initialState);
   const {setToken, activeUser, setActiveUser } = useContext(StoreContext);
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
-  const [statusMsg, setStatusMsg] = useState(false);
-
+  const [msg, setStatusMsg] = useState(initialMsg);
+  
   useEffect(() => {
     axios(baseUrl).then(resp => {
         setUsers(resp.data);
     })
 
     setToken('');
-    setStatusMsg("hidden");
+    //setStatusMsg({show: false});
   },[])
+
+  useEffect(() => {
+    setTimeout(() => {setStatusMsg(false)}, 7000);
+  },[msg])
   
   function login({ email, password }) {
     let loginSucess = false;
@@ -43,10 +54,16 @@ const UserLogin = () => {
 
     if (loginSucess)
     {
-      setStatusMsg('Hidden')
       return { token: activeUser._id };
     } else {
-      setStatusMsg('visible')
+      const msg = {
+        type:'error',
+        header: 'Não foi possível concluir',
+        msg: 'Usuário ou senha inválida',
+        show: true
+      }
+
+      setStatusMsg(msg)
     }
   
     return { error: 'Usuário ou senha inválida'}
@@ -65,7 +82,6 @@ const UserLogin = () => {
     e.preventDefault();
 
     const { token } = login(values);
-    console.log(token)
     if (token) {
       setToken(activeUser._id)
       return navigate('/search-person');
@@ -84,8 +100,6 @@ const UserLogin = () => {
       </div>
       <div className="login-content scale-up-center">
         <label className="login-title">Acessar Conta</label>
-        <label htmlFor="" style={{visibility: statusMsg, fontSize: '0.8rem', color: 'red'}}>Usuário ou senha inválida!</label>
-
         <form className='form' autoComplete="" onSubmit={onSubmit}>
           <div className="form-login">
             <label htmlFor="email"><b>E-mail <span className='asterisco'> *</span></b></label>
@@ -112,6 +126,7 @@ const UserLogin = () => {
           </UIButton>
           <p  >Não é cadastrado? <Link id="onboarding" to="/onboarding">Cadastre-se</Link></p>
         </form>
+        <Alert type={msg.type} header={msg.header} msg={msg.msg} show={msg.show}/>
       </div>
     </div>
   );

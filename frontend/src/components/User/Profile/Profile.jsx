@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import './Profile.css';
 import RobsonLogo from '../../../assets/svg/logo.svg';
 import ProfilePic from '../../../assets/svg/image2.svg';
