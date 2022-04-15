@@ -38,7 +38,7 @@ export default () => {
       setValues(initialState);
       const { value } = e.target;
       setSearchField(value);
-      setSearch(value);
+      setSearch(value.toLowerCase());
       return renderCards();
   };
 
@@ -46,12 +46,6 @@ export default () => {
     const { name } = e.target;
     setValues({...initialState, [name]: true, profession: name.toLowerCase()})
     setSearchField('');
-    return renderCards();
-};
-
-  const handleClick = (e) => {
-    const name = e.target.name;
-    setSearch(name.toLowerCase());
     return renderCards();
   };
 
@@ -88,6 +82,12 @@ export default () => {
     )
   }
 
+  const myName = () => {
+    const myName = activeUser.name.split(' ');
+    const firstLetter = myName[0][0].toUpperCase();
+    return `${firstLetter}${myName[0].substring(1, myName[0].length)}`
+  }
+
   return (
     <div className="app">
       <div className="home-container">
@@ -97,7 +97,7 @@ export default () => {
             <ul className="ul-item">
               <li className="selected-page">Encontre uma pessoa</li>
               <li onClick={handleFindGroup}>Grupo de estudos</li>
-              <li onClick={handleEditProfile}>{`Olá, ${activeUser.name}!`}</li>
+              <li onClick={handleEditProfile}>{`Olá, ${myName()}!`}</li>
             </ul>
           </nav>
         </header>
