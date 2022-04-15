@@ -7,6 +7,7 @@ import Medium from '../../../assets/svg/mediumPic.svg';
 import Linkedin from '../../../assets/svg/linkedin.svg';
 import Drive from '../../../assets/svg/drivePic.svg';
 import { useNavigate } from 'react-router-dom';
+import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png'
 
 export default ({user}) => {
   const navigate = useNavigate();
@@ -86,6 +87,16 @@ export default ({user}) => {
         </a>
 
       </div>}
+      <div className="footer-container">
+        <footer>
+          <div className="footer-robson-logo">
+            <img src={RobsonLogo} alt="" />
+          </div>
+          <div className="footer-fcamara-logo">
+            <img src={FcamaraLogo} alt="" />
+          </div>
+        </footer>
+      </div>
     </div>
   );
 };

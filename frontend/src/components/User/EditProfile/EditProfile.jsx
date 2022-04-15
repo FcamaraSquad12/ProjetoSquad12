@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import StoreContext from 'components/Store/Context';
 import UIButton from "components/UI/Button/Button";
 import axios from "axios";
+import FcamaraLogo from '../../../assets/imgs/logo-fcamara.png';
 
 const baseUrl = "http://localhost:3001";
 
@@ -108,14 +109,20 @@ export default () => {
           </div>
         </div>
 
-        
-          
-       
-
-        <div>
+        <div className='btn-edit'>
           <UIButton type="submit" theme="" className="edit-btn-submit" rounded>{'SALVAR'}</UIButton>
         </div>
       </form>
+      <div className="footer-container">
+        <footer>
+          <div className="footer-robson-logo">
+            <img src={RobsonLogo} alt="" />
+          </div>
+          <div className="footer-fcamara-logo">
+            <img src={FcamaraLogo} alt="" />
+          </div>
+        </footer>
+      </div>
     </div>
   );
 };
