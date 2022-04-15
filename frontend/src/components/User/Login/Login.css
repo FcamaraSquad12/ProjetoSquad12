@@ -87,8 +87,11 @@
   width: 100%;
   text-align:right;
   color: var(--orange-color);
+  box-shadow: none;
 }
-
+#onboarding{
+  box-shadow: none;
+}
 #sing-up {
   color: var(--orange-color);
 }

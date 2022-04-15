@@ -5,7 +5,7 @@ import './Onboarding.css'
 export default () =>         
     <div id="collapseOne" className="collapse show" aria-labelledby="headingOne"
         data-bs-parent="#accordionExample">
-        <div className="card-body">
+        <div className="card-body" id="card-img">
             <div>
                 <img src={TeamPic} alt=""/>
             </div>

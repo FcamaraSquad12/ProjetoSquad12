@@ -15,7 +15,8 @@
 }
 
 .profile-image-container{
-flex:1;
+    flex:1;
+    
 }
 
 .profile-infos{
@@ -226,6 +227,10 @@ div > .item-skill:hover{
     }
     .profile-image-container > img{
         width: 150px;
+  
+    }
+    .profile-image-container{
+        text-align: center;
     }
     .profile-container{
         flex-direction: column;
