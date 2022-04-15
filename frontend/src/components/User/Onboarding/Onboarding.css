@@ -115,6 +115,11 @@
     align-items: center;
     text-align: center;
 }
+
+.error{
+    position: fixed;
+    left: 70%;
+}
 @media screen and (max-width: 1038px) {
     .bs-stepper-content{
         width: 100%;
@@ -127,6 +132,10 @@
     }
     .signup-form-control{
         margin-top: 20px;
+    }
+    .error{
+        position: fixed;
+        left: 60%;
     }
 }
 
@@ -145,5 +154,9 @@
         width: 100%;
         flex-direction: column;
         margin: auto;
+    }
+    .error{
+        position: fixed;
+        right: 100%;
     }
 }

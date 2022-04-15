@@ -118,10 +118,10 @@ export default ({next}) => {
               <input id="email" type="text" required name="email" autoComplete="off" onChange={handleChange} value={values.email} placeholder="Digite seu e-mail"/>
             
               <label><b>Senha</b> <span className='asterisco'> *</span></label>
-              <input id="password" type="text" required name="password" autoComplete="off" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
+              <input id="password" type="password" required name="password" autoComplete="off" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
               
               <label><b>Confirme a senha</b> <span className='asterisco'> *</span></label>
-              <input id="confirmPassword" type="text" required name="confirmPassword" autoComplete="off" onChange={handleChange} value={values.confirmPassword} placeholder="Confirmar senha"/>
+              <input id="confirmPassword" type="password" required name="confirmPassword" autoComplete="off" onChange={handleChange} value={values.confirmPassword} placeholder="Confirmar senha"/>
             
               <label><b>Whatsapp</b></label>
               <input id="whatsapp" type="text" name="whatsapp" autoComplete="off" onChange={handleChange} value={values.whatsapp} placeholder="[xx] xxxxx-xxxx"/>
