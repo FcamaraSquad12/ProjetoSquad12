@@ -65,7 +65,7 @@ const UserLogin = () => {
     e.preventDefault();
 
     const { token } = login(values);
-    
+    console.log(token)
     if (token) {
       setToken(activeUser._id)
       return navigate('/search-person');
@@ -110,7 +110,7 @@ const UserLogin = () => {
           >
             Entrar
           </UIButton>
-          <p  >Não é cadastrado? <Link id="Sign-up" to="/signup">Cadastre-se</Link></p>
+          <p  >Não é cadastrado? <Link id="onboarding" to="/onboarding">Cadastre-se</Link></p>
         </form>
       </div>
     </div>

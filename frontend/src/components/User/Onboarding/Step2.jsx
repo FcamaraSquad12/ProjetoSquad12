@@ -27,7 +27,7 @@ function initialState() {
   };
 }
 
-export default () => {
+export default ({next}) => {
   const [values, setValues] = useState(initialState);
   const { token, setToken, setActiveUser } = useContext(StoreContext);
   const navigate = useNavigate();
@@ -73,7 +73,7 @@ export default () => {
   function onSubmit(e) {
     e.preventDefault();
     save(values);
-    if (token) return navigate('/search-person');
+    next();
   }
  
   return (

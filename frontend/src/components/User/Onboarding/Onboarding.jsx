@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { useNavigate } from 'react-router-dom'
 import { render } from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bs-stepper/dist/css/bs-stepper.min.css';
 import Stepper from 'bs-stepper'
+import { Link } from 'react-router-dom';
 import Step1 from './Step1'
 import Step2 from './Step2'
 import Step3 from './Step3'
 import './Onboarding.css'
-
 export default class App extends Component {
     constructor() {
         super();
@@ -31,7 +30,7 @@ export default class App extends Component {
 
   handleGoToHome(e) {
     e.preventDefault();
-   // return navigate('/search-person');
+   //return navigate('/search-person');
   }
 
   render() {
@@ -60,18 +59,17 @@ export default class App extends Component {
 
           <div className="bs-stepper-content">
             <div id="test-l-1" className="content">
-            <Step1/>
-            <button className="btn-1" onClick={() => this.stepper.next()}>Seguir para o cadastro</button>
+              <Step1/>
+              <button className="btn-1" onClick={() => this.stepper.next()}>Seguir para o cadastro</button>
             </div>
 
             <div id="test-l-2" className="content">
-            <Step2/>
-            <button className="btn btn-primary" onClick={() => this.stepper.next()}>Next</button>
+              <Step2 next={() => this.stepper.next()}/>
             </div>
 
             <div id="test-l-3" className="content">
-            <Step3/>
-            <button className="btn-1" onClick={this.handleGoToHome}>Acessar Home Page</button>
+              <Step3/>
+              <button className="btn-1"><Link id="onboarding" to="/login">Entrar</Link></button>
             </div>
           </div>
         </div>

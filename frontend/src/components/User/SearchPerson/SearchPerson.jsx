@@ -45,6 +45,7 @@ export default () => {
   const handleChangeProfession = (e) => {
     const { name } = e.target;
     setValues({...initialState, [name]: true, profession: name.toLowerCase()})
+    setSearchField('');
     return renderCards();
 };
 
@@ -72,7 +73,6 @@ export default () => {
         if (values.profession) {
           if (!found && (user.profession.toLowerCase().search(values.profession) != -1)){
             found = true;
-            console.log(values.profession, user.profession)
             return <Card user={user}/>
           }
         } else {
