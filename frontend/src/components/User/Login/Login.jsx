@@ -76,6 +76,18 @@ const UserLogin = () => {
       [name]: value,
     })
   }
+  
+  function handleRecoveryPassword(e) {
+    e.preventDefault();
+
+    const msg = {
+      type:'error',
+      msg: '❌ Oops! Ainda não implementamos isso.',
+      show: true
+    }
+
+    setStatusMsg(msg)
+  }
 
   function onSubmit(e) {
     e.preventDefault();
@@ -109,7 +121,7 @@ const UserLogin = () => {
             <input id="password" type="password" name="password" onChange={handleChange} value={values.password} placeholder="Digite sua senha"/>
           </div>
           <div className='forgot'>
-            <a id="forgot" href="./">Esqueci a senha</a>
+            <a id="forgot" onClick={(e) => handleRecoveryPassword(e)} href="./">Esqueci a senha</a>
           </div>
 
           <UIButton
