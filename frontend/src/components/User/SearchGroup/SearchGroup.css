@@ -39,7 +39,7 @@ nav ul {
 
 }
 
-  li:hover {
+li:hover {
   color: #FE662E;
   cursor: pointer;
 }
@@ -130,6 +130,9 @@ nav ul {
   color: white;
   border-radius: 5px 0 0 5px;
 
+}
+.join-group:hover{
+  background-color: #FE662E;
 }
 
 .input-group {
