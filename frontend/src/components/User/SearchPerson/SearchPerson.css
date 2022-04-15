@@ -25,6 +25,7 @@ nav {
   justify-content: space-between;
   width: 100%;
   flex-direction: row;
+  align-items: flex-end;
 }
 
 nav ul {
@@ -67,12 +68,14 @@ li:hover {
 .navbar {
   width: 300px;
 }
+.ul-item{
+  margin-bottom: 2px;
+}
 
 .profile-image {
   border-radius: 100%;
   width: var(--width-size);
   height: var(--width-size);
-  background-color: purple;
 }
 
 .label-header {
@@ -86,8 +89,6 @@ li:hover {
   width: 100%;
   gap: 30px;
   margin-bottom: 10px;
-  /* background-color: purple; */
-  /* border-radius: 17px; */
   margin-top: 50px;
   justify-content: space-between;
   align-items: baseline;
@@ -95,8 +96,8 @@ li:hover {
 }
 
 .search-container input{
-  width: 570px;
-  margin-right: 40px;
+  width: 100%;
+  margin-right: 0px;
   border-left:none;
   background-color: none;
   color: var(--orange-color);
