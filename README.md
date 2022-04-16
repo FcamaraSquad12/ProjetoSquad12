@@ -1,6 +1,6 @@
 # ROBSON - SQUAD 12 :rocket: :rocket:
 <ol>
-    <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#sobre">Sobre</a></li>
         <li> <a href="#especificacoes">Especificações</a></li>
         <li> <a href="#comorodaroprojeto">Como Rodar o Projeto?</a> </li>
         <li> <a href="#resultados"> Resultados de Desenvolvimento</a> </li>
@@ -40,6 +40,8 @@ Na <b>ROBSON</b>, pessoas com diferentes níveis de experiência poderão se enc
     
  
 <h2 id="comorodaroprojeto">Como rodar o projeto?</h2>
+
+Para assistir esse tutorial em vídeo na prática, acesse o [guia de instalação da ROBSON](https://youtu.be/QPgdmj3ZTf8).
 
 <b>Você precisará:</b>
 <ul>
@@ -98,6 +100,8 @@ senha: 123456
 
 <h2 id="resultados">Resultados de Desenvolvimento</h2>
 
+Você encontra mais sobre o processo de desenvolvimento clicando [aqui](https://medium.com/@squadfcamara12/processo-de-desenvolvimento-ec624e1c8686)
+
 * Implementação da interface com HTML, CSS, Bootstrap e React;
 * Sistema de login (autenticação com o banco de dados na nuvem);
 * Sistema de cadastro de colaboradores conectado ao banco de dados na nuvem;
@@ -115,13 +119,13 @@ senha: 123456
     * **02** - Criação de sistema de agendamento de mentoria nativo da plataforma.
     * **03** - Autenticação com token JWT
     * **04** - Deploy
-    * **05** - Adicionar camadas de proteção contra erros do usuário.
+    * **05** - Adicionar mais camadas de proteção contra erros do usuário.
 
 <h2 id="conteudoxterno">Conteúdo Externo</h2> 
 
-* [Pitch](https://www.youtube.com/watch?v=uFu-gMvcEFo)
-* Video de funcionalidades
-* Artigo
+* O que é a ROBSON? Descubra assistindo ao nosso [Pitch](https://www.youtube.com/watch?v=uFu-gMvcEFo)!
+* Para ver o nosso projeto rodando acesse o nosso [Video de funcionalidades](https://www.youtube.com/watch?v=mGsjRE1NGjw).
+* Para saber sobre o processo de criação do projeto acesse o nosso [Artigo](https://medium.com/@gustavokappeybasi/robson-a-rede-otimizada-para-conectar-os-sangues-laranjas-b4a7d0e29791).
 
 <h2 id="nossaequipe">Nossa Equipe</h2> 
 
