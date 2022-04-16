@@ -11,7 +11,7 @@
 
 <h2 id="sobre">Sobre</h2> 
 
-<img alt ="Error" src="https://user-images.githubusercontent.com/102808373/163622420-613cb404-4fe6-4fb3-8be2-f1603fca6d4a.svg">
+<img alt ="Error" src="https://user-images.githubusercontent.com/102808373/163656848-b23a234d-f7fc-4f5e-a7ba-38e312e1eb90.png">
 
 A ROBSON - <b>R</b>ede <b>O</b>timizada de <b>B</b>usca e <b>S</b>olução "<b>O</b>range <b>N</b>etworking" - foi um projeto desenvolvido pelo Squad 12 para o Hackathon do Programa de Formação da [FCamara](https://digital.fcamara.com.br/programadeformacao) season 3. O objetivo desse projeto foi a construção de uma uma plataforma onde você encontra pessoas da tecnologia com conhecimentos diversos para tirar suas dúvidas sobre a área ou te orientar no aprendizado de novas habilidades. 
 
